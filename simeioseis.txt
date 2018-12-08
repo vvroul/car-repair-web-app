@@ -1,0 +1,38 @@
+===DOMI========================================================================
+users ->	admin
+			client
+
+homePage ->	owners ->	anazitisi ->	.AFM
+										.email
+						
+						dimiourgia ->	.AFM
+										.onoma
+										.epitheto
+										.dieuthinsi
+										.email
+										.kodikos xristi
+										.marka oximatos
+										.pinakida oximatos
+										.typos xristi (admin or owner)
+						
+						diagrafi ->		koumpi sti selida enimerosi
+						
+						enimerosi ->	ksexoristi selida (an theloume)
+										deixnei ola ta stoixeia
+										tropopoiisi me koumpi sto plai
+			
+			repairs ->	dimiourgia ->	.hmerominia
+										.katastasi
+										.eidosEpiskeuis
+										.kostos
+										.owner
+										.perigrafi (free text)
+						
+						
+						enimerosi ->	idio me parapano 
+						
+						
+						anazitisi ->	.hmerominia (one or range)
+										.AFM
+										.Pinakida oximatos
+===============================================================================
