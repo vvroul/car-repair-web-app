@@ -33,4 +33,24 @@ homePage ->	owners ->	anazitisi ->	.AFM
 						anazitisi ->	.hmerominia (one or range)
 										.AFM
 										.Pinakida oximatos
+===PINAKES=====================================================================
+users:
+uid, integer autoincrement primary key
+AFM, long
+firstName, varchar(30)
+lastName, varchar(30)
+email, string
+password, string
+vType, string
+vPlate, string
+uType, enumerated (user, admin)
+
+repairs:
+rid, integer autoincrement primary key
+datetime, datetime
+rState, enumerated (anamoni, ekseliksi, olokliromeni)
+rType, enumerated (mikri, megali)
+rCost, double
+owner, integer foreign key refers to users.uid
+description, string
 ===============================================================================
