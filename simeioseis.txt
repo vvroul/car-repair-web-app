@@ -33,6 +33,8 @@ homePage ->	owners ->	anazitisi ->	.AFM
 						anazitisi ->	.hmerominia (one or range)
 										.AFM
 										.Pinakida oximatos
+
+
 ===PINAKES=====================================================================
 users:
 uid, integer autoincrement primary key
