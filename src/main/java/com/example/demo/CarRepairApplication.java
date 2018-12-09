@@ -27,5 +27,6 @@ public class CarRepairApplication implements CommandLineRunner {
         logger.info("=============================");
         logger.info("Testing logger output");
         logger.info("=============================");
+
     }
 }

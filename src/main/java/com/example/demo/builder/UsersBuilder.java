@@ -4,7 +4,7 @@ import com.example.demo.domain.Users;
 import com.example.demo.enumeration.UserTypeEnum;
 
 public class UsersBuilder {
-    private int u_id;
+    private Long u_id;
     private Long afm;
     private String firstName;
     private String lastName;
@@ -12,7 +12,7 @@ public class UsersBuilder {
     private String password;
     private UserTypeEnum uType;
 
-    public UsersBuilder setU_id(int u_id) {
+    public UsersBuilder setU_id(Long u_id) {
         this.u_id = u_id;
         return this;
     }
