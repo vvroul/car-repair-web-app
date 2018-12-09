@@ -28,4 +28,8 @@ public class Repairs {
 
     @Column(name = "repair_cost")
     private double rCost;
+
+
+    @Column(name = "description")
+    private String description;
 }
