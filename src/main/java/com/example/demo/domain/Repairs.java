@@ -16,7 +16,7 @@ public class Repairs {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int r_id;
 
-    @Column(name="date time")
+    @Column(name="date_time")
     private String dateTime;
 
     @Enumerated(EnumType.ORDINAL)
@@ -30,7 +30,7 @@ public class Repairs {
     @Column(name = "repair_cost")
     private double rCost;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "user_id")
     private Users owner;
 

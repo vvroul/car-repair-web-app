@@ -23,5 +23,8 @@ public class CarRepairApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         logger.info("=============================");
         logger.info("Testing logger output");
+        logger.info("=============================");
+
+
     }
 }

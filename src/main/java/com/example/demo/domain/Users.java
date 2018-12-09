@@ -25,7 +25,7 @@ public class Users {
     @Column(name = "lastname", length = MAX_NAME_LENGTH)
     private String lastName;
 
-    @Column(name = "email")
+    @Column(name = "email", length = MAX_NAME_LENGTH)
     private String email;
 
     @Column(name = "password", length = MAX_NAME_LENGTH)
