@@ -2,7 +2,6 @@ package com.example.demo.domain;
 
 import javax.persistence.*;
 import java.util.List;
-
 import com.example.demo.enumeration.*;
 
 
@@ -55,7 +54,7 @@ public class Users {
         this.uType = uType;
     }
 
-    public Users() {
+    private Users() {
     }
 
     public int getU_id() {

@@ -1,9 +1,12 @@
 package com.example.demo;
 
+import com.example.demo.builder.UsersBuilder;
+import com.example.demo.enumeration.UserTypeEnum;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import com.example.demo.domain.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 
@@ -24,7 +27,5 @@ public class CarRepairApplication implements CommandLineRunner {
         logger.info("=============================");
         logger.info("Testing logger output");
         logger.info("=============================");
-
-
     }
 }

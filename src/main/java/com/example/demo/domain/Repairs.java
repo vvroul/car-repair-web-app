@@ -2,10 +2,7 @@ package com.example.demo.domain;
 
 import com.example.demo.enumeration.RepairStateEnum;
 import com.example.demo.enumeration.RepairTypeEnum;
-import java.time.LocalDateTime;
-import java.util.List;
 import javax.persistence.*;
-
 
 @Entity
 @Table(name = "REPAIRS")
