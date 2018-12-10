@@ -5,6 +5,7 @@ import com.example.demo.service.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,5 +21,11 @@ public class UsersController {
 
     @Autowired
     UsersServiceImpl usersService;
+
+    @GetMapping("/")
+    public String home(ModelMap model) {
+        model.addAttribute("message", "Hello World!");
+        return "register";
+    }
 
 }
