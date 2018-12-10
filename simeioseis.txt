@@ -2,10 +2,10 @@
 users ->	admin
 			client
 
-homePage ->	owners ->	anazitisi ->	.AFM
+homePage ->	owners ->	anazitisi ->	.aFM
 										.email
 
-						dimiourgia ->	.AFM
+						dimiourgia ->	.aFM
 										.onoma
 										.epitheto
 										.dieuthinsi
@@ -31,14 +31,14 @@ homePage ->	owners ->	anazitisi ->	.AFM
 						enimerosi ->	idio me parapano 
 
 						anazitisi ->	.hmerominia (one or range)
-										.AFM
+										.aFM
 										.Pinakida oximatos
 
 
 ===PINAKES=====================================================================
 users:
 uid, integer autoincrement primary key
-AFM, long
+aFM, long
 firstName, varchar(30)
 lastName, varchar(30)
 email, string

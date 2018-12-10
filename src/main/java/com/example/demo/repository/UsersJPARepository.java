@@ -10,9 +10,9 @@ import java.util.Optional;
 
 
 public interface UsersJPARepository extends JpaRepository<Users, Long> {
+
     @Override
-    List<Users> findAll();
+    Users save(Users users);
 
-    List<Users> findByAFMAndEmail();
-
+    Optional<Users> getUsersByAFMAndEmail(Long aFM, String email);
 }

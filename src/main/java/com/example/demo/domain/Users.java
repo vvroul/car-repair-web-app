@@ -6,7 +6,7 @@ import com.example.demo.enumeration.*;
 
 
 @Entity
-@Table(name = "USERS", uniqueConstraints = {@UniqueConstraint(columnNames = {"email", "password", "AFM"})})
+@Table(name = "USERS", uniqueConstraints = {@UniqueConstraint(columnNames = {"email", "password", "aFM"})})
 public class Users {
     private static final int MAX_NAME_LENGTH = 30;
 
@@ -15,8 +15,8 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long u_id;
 
-    @Column(name = "AFM", nullable = false)
-    private Long AFM;
+    @Column(name = "aFM", nullable = false)
+    private Long aFM;
 
     @Column(name = "firstname", length = MAX_NAME_LENGTH)
     private String firstName;
@@ -43,10 +43,9 @@ public class Users {
     @OneToMany(mappedBy = "owner", targetEntity = Repairs.class)
     private List<Repairs> repairs;
 
-
-    public Users(Long u_id, Long AFM, String firstName, String lastName, String email, String password, UserTypeEnum uType) {
+    public Users(Long u_id, Long aFM, String firstName, String lastName, String email, String password, UserTypeEnum uType) {
         this.u_id = u_id;
-        this.AFM = AFM;
+        this.aFM = aFM;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -65,12 +64,12 @@ public class Users {
         this.u_id = u_id;
     }
 
-    public Long getAFM() {
-        return AFM;
+    public Long getaFM() {
+        return aFM;
     }
 
-    public void setAFM(Long AFM) {
-        this.AFM = AFM;
+    public void setaFM(Long aFM) {
+        this.aFM = aFM;
     }
 
     public String getFirstName() {
@@ -141,7 +140,7 @@ public class Users {
     public String toString() {
         final StringBuilder sb = new StringBuilder("Users{");
         sb.append("u_id=").append(u_id);
-        sb.append(", AFM=").append(AFM);
+        sb.append(", aFM=").append(aFM);
         sb.append(", firstName='").append(firstName).append('\'');
         sb.append(", lastName='").append(lastName).append('\'');
         sb.append(", email='").append(email).append('\'');

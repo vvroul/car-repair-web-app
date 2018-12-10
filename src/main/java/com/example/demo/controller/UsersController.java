@@ -19,28 +19,6 @@ import java.util.List;
 public class UsersController {
 
     @Autowired
-    UsersService usersService;
-
-//    @GetMapping(path = "/")
-//    public List<User> findAll() {
-//        return userService.findAll();
-//    }
-//
-//
-//    @GetMapping(path = "/{id}")
-//    public User find(@PathVariable Long id) {
-//        return userService.find(id);
-//    }
-//
-//
-//    @GetMapping(path = "")
-//    public List<User> findByUsername(@RequestParam String surname) {
-//        return userService.findBySurname(surname);
-//    }
-
-    @PostMapping(path = "")
-    public Users create(@RequestBody Users users) {
-        return usersService.create(users);
-    }
+    UsersServiceImpl usersService;
 
 }

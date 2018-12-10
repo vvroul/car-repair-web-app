@@ -1,30 +1,12 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.Users;
-import com.example.demo.exception.UsersNotFoundException;
-import com.example.demo.repository.UsersJPARepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Optional;
 
-@Service
-public class UsersService {
+public interface UsersService {
 
-    @Autowired
-    private UsersJPARepository jpaRepository;
+    Optional<Users> findUsersByAFMAndEmail(Long aFM, String email);
 
-    public Users find(Long id) {
-        return jpaRepository.findById(id)
-                .orElseThrow(() -> new UsersNotFoundException());
-    }
-
-    public List<Users> findAll() {
-        return jpaRepository.findAll();
-    }
-
-    public Users create(Users users) {
-        return jpaRepository.save(users);
-    }
+    void saveUsers(Users users);
 }

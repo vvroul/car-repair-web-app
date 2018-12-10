@@ -1,0 +1,1 @@
+INSERT INTO USERS (email, password, aFM) VALUES ('email1', 'Tolstoy1', 1341);
