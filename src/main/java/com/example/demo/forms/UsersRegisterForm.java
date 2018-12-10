@@ -1,15 +1,32 @@
-package com.example.demo.form;
+package com.example.demo.forms;
 
 import com.example.demo.enumeration.UserTypeEnum;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 
 public class UsersRegisterForm {
+    private static final String PASSWORD_PATTERN = "^[a-zA-Z0-9@#$%^&]*$";
+
+    private static final String MAIL_PATTERN = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$";
+
+    private static final int PASSWORD_MINSIZE = 6;
 
     private Long u_id;
+
     private Long afm;
+
     private String firstName;
+
     private String lastName;
+
+    @Pattern(regexp = MAIL_PATTERN, message = "Invalid Mail")
     private String email;
+
+    @Pattern(regexp = PASSWORD_PATTERN, message = "Invalid Password")
+    @Size(min = PASSWORD_MINSIZE, message = "Invalid Password Size")
     private String password;
+
     private UserTypeEnum uType;
 
     public Long getU_id() {
