@@ -14,7 +14,6 @@ public class UsersRegisterForm {
 
     private static final int PASSWORD_MINSIZE = 6;
 
-    private Long u_id;
     private Long afm;
     private String firstName;
     private String lastName;
@@ -29,14 +28,6 @@ public class UsersRegisterForm {
     private String vType;
     private String VPlate;
     private List<Repairs> repairs;
-
-    public Long getU_id() {
-        return u_id;
-    }
-
-    public void setU_id(Long u_id) {
-        this.u_id = u_id;
-    }
 
     public Long getAfm() {
         return afm;

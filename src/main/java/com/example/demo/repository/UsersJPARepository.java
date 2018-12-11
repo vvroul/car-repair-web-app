@@ -11,9 +11,5 @@ import java.util.Optional;
 
 
 public interface UsersJPARepository extends JpaRepository<Users, Long> {
-
-    @Override
-    Users save(Users users);
-
     Optional<Users> findAllByAFMAndEmail(Long aFM, String email);
 }

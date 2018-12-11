@@ -20,6 +20,10 @@ public class UsersBuilder {
     private String VPlate;
     private List<Repairs> repairs;
 
+    public static UsersBuilder getUsersBuilder() {
+        return new UsersBuilder();
+    }
+
 
     public UsersBuilder setU_id(Long u_id) {
         this.u_id = u_id;
@@ -78,37 +82,5 @@ public class UsersBuilder {
 
     public Users createUsers() {
         return new Users(u_id, afm, firstName, lastName, email, password, uType);
-    }
-
-    public Users setUsers(UsersRegisterForm usersRegisterForm) {
-        Users users = createUsers();
-        users.setU_id(usersRegisterForm.getU_id());
-        users.setaFM(usersRegisterForm.getAfm());
-        users.setFirstName(usersRegisterForm.getFirstName());
-        users.setLastName(usersRegisterForm.getLastName());
-        users.setAddress(usersRegisterForm.getAddress());
-        users.setEmail(usersRegisterForm.getEmail());
-        users.setPassword(usersRegisterForm.getPassword());
-        users.setuType(usersRegisterForm.getuType());
-        users.setvType(usersRegisterForm.getvType());
-        users.setVPlate(usersRegisterForm.getVPlate());
-        users.setRepairs(usersRegisterForm.getRepairs());
-        return users;
-    }
-
-    public Users setUsers(Users theUsers) {
-        Users users = createUsers();
-        users.setU_id(theUsers.getU_id());
-        users.setaFM(theUsers.getaFM());
-        users.setFirstName(theUsers.getFirstName());
-        users.setLastName(theUsers.getLastName());
-        users.setAddress(theUsers.getAddress());
-        users.setEmail(theUsers.getEmail());
-        users.setPassword(theUsers.getPassword());
-        users.setuType(theUsers.getuType());
-        users.setvType(theUsers.getvType());
-        users.setVPlate(theUsers.getVPlate());
-        users.setRepairs(theUsers.getRepairs());
-        return users;
     }
 }

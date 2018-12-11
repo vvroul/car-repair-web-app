@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.controller.mappers.RegisterFormToUsersMapper;
 import com.example.demo.domain.Users;
 import com.example.demo.forms.UsersRegisterForm;
+import com.example.demo.model.UsersModel;
 import com.example.demo.service.*;
 
 import com.example.demo.validators.UsersRegisterValidator;
@@ -20,7 +21,6 @@ import javax.validation.Valid;
 public class UsersRegistrationController {
 
     private static final String REGISTER_FORM = "registerForm";
-
 
     @Autowired
     UsersServiceImpl usersServiceImpl;
@@ -56,7 +56,7 @@ public class UsersRegistrationController {
             return "register";
         }
 
-        Users userModel = mapper.mapToUserModel(registerForm);
+        UsersModel userModel = mapper.mapToUserModel(registerForm);
         usersServiceImpl.create(userModel);
         return "redirect:/";
     }

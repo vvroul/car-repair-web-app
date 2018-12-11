@@ -6,6 +6,7 @@ import com.example.demo.controller.mappers.UsersToUsersMapper;
 import com.example.demo.domain.Users;
 import com.example.demo.exception.UsersNotFoundException;
 import com.example.demo.forms.UsersRegisterForm;
+import com.example.demo.model.UsersModel;
 import com.example.demo.repository.UsersJPARepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,14 +29,10 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
-    public void saveUsers(Users users) {
-        usersRepository.save(users);
-    }
-
-    @Override
-    public Users create(Users userModel) {
-        Users users = new UsersBuilder().setUsers(userModel);
-        Users savedUser = usersRepository.save(users);
-        return mapper.mapToUserModel(savedUser);
+    public UsersModel create(UsersModel userModel) {
+        UsersBuilder builder = UsersBuilder.getUsersBuilder();
+        Users users = builder.setEmail(userModel.getEmail()).setPassword(userModel.getPassword()).setAFM(userModel.getaFM()).createUsers();
+        Users savedUsers = usersRepository.save(users);
+        return mapper.mapToUserModel(savedUsers);
     }
 }

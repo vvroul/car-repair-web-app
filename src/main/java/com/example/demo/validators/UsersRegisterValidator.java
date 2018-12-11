@@ -23,10 +23,10 @@ public class UsersRegisterValidator implements Validator {
         //here perform your checks
         if (registrationForm.getEmail() == null) {
             // add an error for the field called ‘email’
-            errors.rejectValue("email", "email is empty");
+            errors.rejectValue("email", "email.empty");
         }
 
-        ValidationUtils.rejectIfEmpty(errors, "username", "username.empty");
+        ValidationUtils.rejectIfEmpty(errors, "password", "password.empty");
     }
 
 }
