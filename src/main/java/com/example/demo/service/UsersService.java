@@ -6,7 +6,9 @@ import java.util.Optional;
 
 public interface UsersService {
 
-    Optional<Users> findUsersByAFMAndEmail(Long aFM, String email);
+    Optional<Users> getUsersByAFMAndEmail(Long aFM, String email);
 
     void saveUsers(Users users);
+
+    Users create(Users user);
 }

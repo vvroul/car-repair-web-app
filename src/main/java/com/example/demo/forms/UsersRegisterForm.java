@@ -1,8 +1,10 @@
 package com.example.demo.forms;
 
+import com.example.demo.domain.Repairs;
 import com.example.demo.enumeration.UserTypeEnum;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 
 public class UsersRegisterForm {
@@ -13,21 +15,20 @@ public class UsersRegisterForm {
     private static final int PASSWORD_MINSIZE = 6;
 
     private Long u_id;
-
     private Long afm;
-
     private String firstName;
-
     private String lastName;
-
     @Pattern(regexp = MAIL_PATTERN, message = "Invalid Mail")
     private String email;
+    private String address;
 
     @Pattern(regexp = PASSWORD_PATTERN, message = "Invalid Password")
     @Size(min = PASSWORD_MINSIZE, message = "Invalid Password Size")
     private String password;
-
     private UserTypeEnum uType;
+    private String vType;
+    private String VPlate;
+    private List<Repairs> repairs;
 
     public Long getU_id() {
         return u_id;
@@ -83,5 +84,37 @@ public class UsersRegisterForm {
 
     public void setuType(UserTypeEnum uType) {
         this.uType = uType;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getvType() {
+        return vType;
+    }
+
+    public void setvType(String vType) {
+        this.vType = vType;
+    }
+
+    public String getVPlate() {
+        return VPlate;
+    }
+
+    public void setVPlate(String VPlate) {
+        this.VPlate = VPlate;
+    }
+
+    public List<Repairs> getRepairs() {
+        return repairs;
+    }
+
+    public void setRepairs(List<Repairs> repairs) {
+        this.repairs = repairs;
     }
 }

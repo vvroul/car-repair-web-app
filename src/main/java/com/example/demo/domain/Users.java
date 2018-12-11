@@ -18,6 +18,9 @@ public class Users {
     @Column(name = "aFM", nullable = false)
     private Long aFM;
 
+    @Column(name = "address")
+    private String address;
+
     @Column(name = "firstname", length = MAX_NAME_LENGTH)
     private String firstName;
 
@@ -134,6 +137,14 @@ public class Users {
 
     public void setRepairs(List<Repairs> repairs) {
         this.repairs = repairs;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Override
