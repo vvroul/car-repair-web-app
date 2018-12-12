@@ -1,12 +1,15 @@
 package com.example.demo.controller;
 
 import com.example.demo.controller.mappers.RegisterFormToUsersMapper;
+import com.example.demo.controller.mappers.SearchFormToUsersMapper;
 import com.example.demo.domain.Users;
 import com.example.demo.forms.UsersRegisterForm;
+import com.example.demo.forms.UsersSearchForm;
 import com.example.demo.model.UsersModel;
 import com.example.demo.service.*;
 
 import com.example.demo.validators.UsersRegisterValidator;
+import com.example.demo.validators.UsersSearchValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,47 +19,50 @@ import org.springframework.web.bind.annotation.*;
 import com.example.demo.utils.GlobalAttributes;
 
 import javax.validation.Valid;
+import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class UsersSearchController {
 
-    private static final String REGISTER_FORM = "registerForm";
+    private static final String SEARCH_FORM = "searchForm";
 
-    //@Autowired
+    @Autowired
     UsersServiceImpl usersServiceImpl;
 
-    //@Autowired
-    //private UsersRegisterValidator registerValidator;
+    @Autowired
+    private UsersSearchValidator searchValidator;
 
-    //@Autowired
-    //private RegisterFormToUsersMapper mapper;
+    @Autowired
+    private SearchFormToUsersMapper mapper;
 
-//    @InitBinder(REGISTER_FORM)
-//    protected void initBinder(final WebDataBinder binder) {
-//        binder.addValidators(registerValidator);
-//    }
+    @InitBinder(SEARCH_FORM)
+    protected void initBinder(final WebDataBinder binder) {
+        binder.addValidators(searchValidator);
+    }
 
-    @GetMapping(value = "/search") public String search() {
-//        model.addAttribute(REGISTER_FORM,
-//                new UsersRegisterForm());
+    @GetMapping(value = "/search") public String search(Model model) {
+        model.addAttribute(SEARCH_FORM,
+                new UsersSearchForm());
         return "search";
     }
 
-//    @PostMapping(value = "/register")
-//    public String register(Model model,
-//                           @Valid @ModelAttribute(REGISTER_FORM)
-//                                   UsersRegisterForm registerForm,
-//                           BindingResult bindingResult) {
-//
-//
-//        if (bindingResult.hasErrors()) {
-//            //have some error handling here, perhaps add extra error messages to the model
-//            model.addAttribute("errorMessage", "an error occurred");
-//            return "register";
-//        }
-//
-//        UsersModel userModel = mapper.mapToUserModel(registerForm);
-//        usersServiceImpl.create(userModel);
-//        return "register";
-//    }
+    @PostMapping(value = "/search")
+    public String search(Model model,
+                           @Valid @ModelAttribute(SEARCH_FORM)
+                                   UsersSearchForm searchForm,
+                           BindingResult bindingResult) {
+
+
+        if (bindingResult.hasErrors()) {
+            //have some error handling here, perhaps add extra error messages to the model
+            model.addAttribute("errorMessage", "an error occurred");
+            return "search";
+        }
+
+        UsersModel userModel = mapper.mapToUserModel(searchForm);
+        Optional<Users> theUsers =  usersServiceImpl.getUsersByAFMAndEmail(userModel.getaFM(), userModel.getEmail());
+
+        return "search";
+    }
 }
