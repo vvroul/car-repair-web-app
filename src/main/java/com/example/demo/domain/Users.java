@@ -21,10 +21,10 @@ public class Users {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "firstname", length = MAX_NAME_LENGTH)
+    @Column(name = "firstName", length = MAX_NAME_LENGTH)
     private String firstName;
 
-    @Column(name = "lastname", length = MAX_NAME_LENGTH)
+    @Column(name = "lastName", length = MAX_NAME_LENGTH)
     private String lastName;
 
     @Column(name = "email", length = MAX_NAME_LENGTH)
@@ -46,14 +46,17 @@ public class Users {
     @OneToMany(mappedBy = "owner", targetEntity = Repairs.class)
     private List<Repairs> repairs;
 
-    public Users(Long u_id, Long aFM, String firstName, String lastName, String email, String password, UserTypeEnum uType) {
+    public Users(Long u_id, Long aFM, String firstName, String lastName, String address, String email, String password, UserTypeEnum uType, String vType, String vPlate) {
         this.u_id = u_id;
         this.aFM = aFM;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.address = address;
         this.uType = uType;
+        this.vType = vType;
+        this.VPlate = vPlate;
     }
 
     private Users() {

@@ -81,6 +81,6 @@ public class UsersBuilder {
     }
 
     public Users createUsers() {
-        return new Users(u_id, afm, firstName, lastName, email, password, uType);
+        return new Users(u_id, afm, firstName, lastName, address, email, password, uType, vType, VPlate);
     }
 }

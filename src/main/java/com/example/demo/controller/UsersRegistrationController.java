@@ -58,6 +58,6 @@ public class UsersRegistrationController {
 
         UsersModel userModel = mapper.mapToUserModel(registerForm);
         usersServiceImpl.create(userModel);
-        return "redirect:/";
+        return "register";
     }
 }

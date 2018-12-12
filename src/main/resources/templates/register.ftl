@@ -14,7 +14,7 @@
     <div>
         <label for="firstName">First name : </label>
         <@spring.bind "registerForm.firstName"/>
-            <input type="firstname" name="firstname" id="firstname" placeholder="firstname">
+            <input type="firstname" name="firstName" id="firstName" placeholder="firstName">
         <#list spring.status.errorMessages as error>
             <span>${error}</span>
         </#list>
@@ -23,7 +23,7 @@
     <div>
         <label for="lastName">Last name : </label>
         <@spring.bind "registerForm.lastName"/>
-            <input type="lastname" name="lastname" id="lastname" placeholder="lastname">
+            <input type="lastname" name="lastName" id="lastName" placeholder="lastName">
         <#list spring.status.errorMessages as error>
             <span>${error}</span>
         </#list>

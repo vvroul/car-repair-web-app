@@ -31,7 +31,15 @@ public class UsersServiceImpl implements UsersService {
     @Override
     public UsersModel create(UsersModel userModel) {
         UsersBuilder builder = UsersBuilder.getUsersBuilder();
-        Users users = builder.setEmail(userModel.getEmail()).setPassword(userModel.getPassword()).setAFM(userModel.getaFM()).createUsers();
+        Users users = builder.setEmail(userModel.getEmail()).
+                setPassword(userModel.getPassword()).
+                setAFM(userModel.getaFM()).
+                setFirstName(userModel.getFirstName()).
+                setLastName(userModel.getLastName()).
+                setAddress(userModel.getAddress()).
+                setuType(userModel.getuType()).
+                setvType(userModel.getvType()).
+                setVPlate(userModel.getVPlate()).createUsers();
         Users savedUsers = usersRepository.save(users);
         return mapper.mapToUserModel(savedUsers);
     }

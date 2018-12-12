@@ -14,6 +14,12 @@ public class RegisterFormToUsersMapper {
         userModel.setEmail(registerForm.getEmail());
         userModel.setPassword(registerForm.getPassword());
         userModel.setaFM(registerForm.getAfm());
+        userModel.setFirstName(registerForm.getFirstName());
+        userModel.setLastName(registerForm.getLastName());
+        userModel.setAddress(registerForm.getAddress());
+        userModel.setuType(registerForm.getuType());
+        userModel.setvType(registerForm.getvType());
+        userModel.setVPlate(registerForm.getVPlate());
         return userModel;
     }
 }
