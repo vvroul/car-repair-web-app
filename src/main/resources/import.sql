@@ -1,0 +1,10 @@
+INSERT INTO USERS (email, password, aFM) VALUES ('email1', 'Tolstoy1', 1341);
+INSERT INTO USERS (email, password, aFM) VALUES ('email2', 'Tolstoy2', 1342);
+INSERT INTO USERS (email, password, aFM) VALUES ('email3', 'Tolstoy3', 1343);
+INSERT INTO USERS (email, password, aFM) VALUES ('email4', 'Tolstoy4', 1344);
+INSERT INTO USERS (email, password, aFM) VALUES ('email5', 'Tolstoy5', 1345);
+INSERT INTO USERS (email, password, aFM) VALUES ('email6', 'Tolstoy6', 1346);
+INSERT INTO USERS (email, password, aFM) VALUES ('email7', 'Tolstoy7', 1347);
+INSERT INTO USERS (email, password, aFM) VALUES ('email8', 'Tolstoy8', 1348);
+INSERT INTO USERS (email, password, aFM) VALUES ('email9', 'Tolstoy9', 1349);
+INSERT INTO USERS (email, password, aFM) VALUES ('email10', 'Tolstoy19', 1350);
