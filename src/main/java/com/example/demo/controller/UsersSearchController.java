@@ -51,7 +51,9 @@ public class UsersSearchController {
     public String search(Model model,
                            @Valid @ModelAttribute(SEARCH_FORM)
                                    UsersSearchForm searchForm,
-                           BindingResult bindingResult) {
+                           BindingResult bindingResult,
+                         @RequestParam(value = "aFM", required = false, defaultValue = "") Long aFM,
+                         @RequestParam(value = "email", required = false, defaultValue = "") String email ) {
 
 
         if (bindingResult.hasErrors()) {
@@ -61,8 +63,13 @@ public class UsersSearchController {
         }
 
         UsersModel userModel = mapper.mapToUserModel(searchForm);
-        Optional<Users> theUsers =  usersServiceImpl.getUsersByAFMAndEmail(userModel.getaFM(), userModel.getEmail());
-
-        return "search";
+        Users theUsers =  usersServiceImpl.getUsersByAFMAndEmail(userModel.getaFM(), userModel.getEmail());
+        aFM = theUsers.getaFM();
+        System.out.println("afm : " + aFM);
+        email = theUsers.getEmail();
+        model.addAttribute("aFM", aFM);
+        System.out.println("email : " + email);
+        model.addAttribute("email", email);
+        return "displayResults";
     }
 }

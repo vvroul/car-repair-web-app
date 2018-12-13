@@ -1,6 +1,4 @@
 <#import "/spring.ftl" as spring />
-<h2 class="hello-title">Search</h2>
-
 <!-- Bootstrap core CSS -->
 <link href="../static/bootstrap.min.css" rel="stylesheet">
 <link href="../static/dashboard.css" rel="stylesheet">
@@ -9,7 +7,7 @@
     <div class="row">
         <div class="col-sm-12 main">
             <h1 class="page-header">Search</h1>
-            <form action="/search" class="form-horizontal" id="search">
+            <form method="post" action="/search" class="form-horizontal" id="search">
                 <div class="form-group">
                     <label class="col-sm-1 control-label" for="email">Email</label>
                     <div class="col-sm-11">

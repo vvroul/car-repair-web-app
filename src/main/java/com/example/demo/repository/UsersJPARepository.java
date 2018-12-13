@@ -11,5 +11,5 @@ import java.util.Optional;
 
 
 public interface UsersJPARepository extends JpaRepository<Users, Long> {
-    Optional<Users> findAllByAFMAndEmail(Long aFM, String email);
+    Users findUsersByAFMAndEmail(Long aFM, String email);
 }

@@ -11,6 +11,7 @@ import com.example.demo.repository.UsersJPARepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -24,8 +25,8 @@ public class UsersServiceImpl implements UsersService {
 
 
     @Override
-    public Optional<Users> getUsersByAFMAndEmail(Long aFM, String email) {
-        return usersRepository.findAllByAFMAndEmail(aFM, email);
+    public Users getUsersByAFMAndEmail(Long aFM, String email) {
+        return usersRepository.findUsersByAFMAndEmail(aFM, email);
     }
 
     @Override
