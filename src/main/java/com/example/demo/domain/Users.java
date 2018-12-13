@@ -12,17 +12,17 @@ public class Users {
     private static final int MAX_NAME_LENGTH = 30;
 
     @Id
-    @Column(name="user_id", nullable = false)
+    @Column(name="u_id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int u_id;
 
     @Column(name = "AFM", nullable = false)
     private Long AFM;
 
-    @Column(name = "firstname", length = MAX_NAME_LENGTH)
+    @Column(name = "firstName", length = MAX_NAME_LENGTH)
     private String firstName;
 
-    @Column(name = "lastname", length = MAX_NAME_LENGTH)
+    @Column(name = "lastName", length = MAX_NAME_LENGTH)
     private String lastName;
 
     @Column(name = "email", length = MAX_NAME_LENGTH)
@@ -31,27 +31,30 @@ public class Users {
     @Column(name = "password", length = MAX_NAME_LENGTH)
     private String password;
 
-    @Column(name = "vehicle_type")
+    @Column(name = "vType")
     private String vType;
 
-    @Column(name = "vehicle_plate")
-    private String VPlate;
+    @Column(name = "vPlate")
+    private String vPlate;
 
-    @Enumerated(EnumType.ORDINAL)
-    @Column(name = "user_type")
+    @Enumerated(EnumType.STRING)
+    @Column(name = "uType")
     private UserTypeEnum uType;
 
     @OneToMany(mappedBy = "owner", targetEntity = Repairs.class)
     private List<Repairs> repairs;
 
 
-    public Users(int u_id, Long AFM, String firstName, String lastName, String email, String password, UserTypeEnum uType) {
+
+    public Users(int u_id, Long AFM, String firstName, String lastName, String email, String password, String vType, String vPlate, UserTypeEnum uType) {
         this.u_id = u_id;
         this.AFM = AFM;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.vType = vType;
+        this.vPlate = vPlate;
         this.uType = uType;
     }
 
@@ -114,12 +117,12 @@ public class Users {
         this.vType = vType;
     }
 
-    public String getVPlate() {
-        return VPlate;
+    public String getvPlate() {
+        return vPlate;
     }
 
-    public void setVPlate(String VPlate) {
-        this.VPlate = VPlate;
+    public void setvPlate(String vPlate) {
+        this.vPlate = vPlate;
     }
 
     public UserTypeEnum getuType() {
@@ -148,7 +151,7 @@ public class Users {
         sb.append(", email='").append(email).append('\'');
         sb.append(", password='").append(password).append('\'');
         sb.append(", vType='").append(vType).append('\'');
-        sb.append(", VPlate='").append(VPlate).append('\'');
+        sb.append(", vPlate='").append(vPlate).append('\'');
         sb.append(", uType=").append(uType);
         sb.append('}');
         return sb.toString();
