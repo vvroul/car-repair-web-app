@@ -15,7 +15,7 @@ public class Repairs {
     @Id
     @Column(name = "r_id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int r_id;
+    private Long r_id;
 
     @Column(name = "dateTime")
     private Date dateTime;
@@ -41,7 +41,8 @@ public class Repairs {
 
 
 
-    public Repairs(Date dateTime, RepairStateEnum rState, RepairTypeEnum rType, Double rCost, Users owner, String description) {
+    public Repairs(Long r_id,Date dateTime, RepairStateEnum rState, RepairTypeEnum rType, Double rCost, Users owner, String description) {
+        this.r_id = r_id;
         this.dateTime = dateTime;
         this.rState = rState;
         this.rType = rType;
@@ -54,11 +55,11 @@ public class Repairs {
 
     }
 
-    public int getR_id() {
+    public Long getR_id() {
         return r_id;
     }
 
-    public void setR_id(int r_id) {
+    public void setR_id(Long r_id) {
         this.r_id = r_id;
     }
 

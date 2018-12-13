@@ -14,7 +14,7 @@ public class Users {
     @Id
     @Column(name="u_id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int u_id;
+    private Long u_id;
 
     @Column(name = "AFM", nullable = false)
     private Long AFM;
@@ -46,7 +46,7 @@ public class Users {
 
 
 
-    public Users(int u_id, Long AFM, String firstName, String lastName, String email, String password, String vType, String vPlate, UserTypeEnum uType) {
+    public Users(Long u_id, Long AFM, String firstName, String lastName, String email, String password, String vType, String vPlate, UserTypeEnum uType) {
         this.u_id = u_id;
         this.AFM = AFM;
         this.firstName = firstName;
@@ -61,11 +61,11 @@ public class Users {
     public Users() {
     }
 
-    public int getU_id() {
+    public Long getU_id() {
         return u_id;
     }
 
-    public void setU_id(int u_id) {
+    public void setU_id(Long u_id) {
         this.u_id = u_id;
     }
 
