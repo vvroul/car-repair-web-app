@@ -56,5 +56,4 @@ rCost, double
 owner, integer foreign key refers to users.uid
 description, string
 
--> made 2 sql files to fill the tables -> look to import.sql
 ===============================================================================
