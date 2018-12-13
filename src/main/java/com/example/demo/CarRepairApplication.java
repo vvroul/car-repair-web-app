@@ -11,22 +11,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 
 
-@SpringBootApplication
+        @SpringBootApplication
 //@EnableConfigurationProperties
 //@EntityScan(basePackages = {"com.project.ppaa.model"})  // scan JPA entities
-public class CarRepairApplication implements CommandLineRunner {
+        public class CarRepairApplication implements CommandLineRunner {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+            private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public static void main(String[] args) {
-        SpringApplication.run(CarRepairApplication.class, args);
-    }
+            public static void main(String[] args) {
+                SpringApplication.run(CarRepairApplication.class, args);
+            }
 
-    @Override
-    public void run(String... args) throws Exception {
-        logger.info("=============================");
-        logger.info("Testing logger output");
-        logger.info("=============================");
+            @Override
+            public void run(String... args) throws Exception {
+                logger.info("=============================");
+                logger.info("Testing logger output");
+                logger.info("=============================");
 
-    }
+            }
 }

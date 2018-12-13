@@ -1,8 +1,8 @@
 <#import "/spring.ftl" as spring />
 
 <!-- Bootstrap core CSS -->
-<link href="../static/bootstrap.min.css" rel="stylesheet">
-<link href="../static/dashboard.css" rel="stylesheet">
+<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+<link href="../static/css/dashboard.css" rel="stylesheet">
 
 <body>
 <h2>We found you these results : </h2>

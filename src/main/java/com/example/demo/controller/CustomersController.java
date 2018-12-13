@@ -16,16 +16,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @Controller
-@RequestMapping(path = "/users")
-public class UsersController {
+@RequestMapping(path = "/admin")
+public class CustomersController {
 
     @Autowired
     UsersServiceImpl usersService;
 
-    @GetMapping("/{id}")
-    public String home(ModelMap model) {
-        model.addAttribute("message", "Hello World!");
-        return "register";
+    @GetMapping("/customers")
+    public String customers(ModelMap model) {
+        return "customers";
     }
 
 }
