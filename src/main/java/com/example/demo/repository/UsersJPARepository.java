@@ -12,4 +12,5 @@ import java.util.Optional;
 
 public interface UsersJPARepository extends JpaRepository<Users, Long> {
     Users findUsersByAFMAndEmail(Long aFM, String email);
+    List<Users> findAll();
 }

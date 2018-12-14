@@ -41,11 +41,11 @@ public class UsersSearchController {
         binder.addValidators(searchValidator);
     }
 
-    @GetMapping(value = "/search") public String search(Model model) {
-        model.addAttribute(SEARCH_FORM,
-                new UsersSearchForm());
-        return "search";
-    }
+//    @GetMapping(value = "/search") public String search(Model model) {
+//        model.addAttribute(SEARCH_FORM,
+//                new UsersSearchForm());
+//        return "search";
+//    }
 
     @PostMapping(value = "/search")
     public String search(Model model,
@@ -65,10 +65,10 @@ public class UsersSearchController {
         UsersModel userModel = mapper.mapToUserModel(searchForm);
         Users theUsers =  usersServiceImpl.getUsersByAFMAndEmail(userModel.getaFM(), userModel.getEmail());
         aFM = theUsers.getaFM();
-        System.out.println("afm : " + aFM);
+        //System.out.println("afm : " + aFM);
         email = theUsers.getEmail();
         model.addAttribute("aFM", aFM);
-        System.out.println("email : " + email);
+        //System.out.println("email : " + email);
         model.addAttribute("email", email);
         return "displayResults";
     }

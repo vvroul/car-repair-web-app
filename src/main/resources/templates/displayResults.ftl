@@ -1,12 +1,13 @@
 <#import "/spring.ftl" as spring />
 
 <!-- Bootstrap core CSS -->
-<link href="../static/css/bootstrap.min.css" rel="stylesheet">
-<link href="../static/css/dashboard.css" rel="stylesheet">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/dashboard.css" rel="stylesheet">
 
 <body>
 <h2>We found you these results : </h2>
 <table>
+    <h2> User with : </h2>
     <tr>
         <td>AFM :</td>
         <td>${aFM!""}</td>

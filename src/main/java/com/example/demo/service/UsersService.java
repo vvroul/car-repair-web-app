@@ -11,4 +11,6 @@ public interface UsersService {
     Users getUsersByAFMAndEmail(Long aFM, String email);
 
     UsersModel create(UsersModel users);
+
+    List<UsersModel> getAll();
 }

@@ -1,10 +1,14 @@
 package com.example.demo.controller;
 
+import com.example.demo.controller.mappers.SearchFormToUsersMapper;
+import com.example.demo.controller.mappers.UsersToUsersMapper;
 import com.example.demo.domain.Users;
+import com.example.demo.model.UsersModel;
 import com.example.demo.service.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,11 +24,19 @@ import java.util.List;
 public class CustomersController {
 
     @Autowired
-    UsersServiceImpl usersService;
+    UsersServiceImpl usersServiceImpl;
 
-    @GetMapping("/customers")
-    public String customers(ModelMap model) {
+//    @GetMapping("/customers")
+//    public String customers(ModelMap model) {
+//        return "customers";
+//    }
+
+    @GetMapping(value = "/customers")
+    public String customers(Model model) {
+        List<UsersModel> users = usersServiceImpl.getAll();
+        model.addAttribute("users", users);
         return "customers";
     }
+
 
 }

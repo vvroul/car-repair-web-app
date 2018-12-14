@@ -1,7 +1,7 @@
 <#import "/spring.ftl" as spring />
 <!-- Bootstrap core CSS -->
-<link href="../static/css/bootstrap.min.css" rel="stylesheet">
-<link href="../static/css/dashboard.css" rel="stylesheet">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/dashboard.css" rel="stylesheet">
 
 <div class="container-fluid">
     <div class="row">
