@@ -51,7 +51,7 @@ public class Repairs {
         this.description = description;
     }
 
-    public Repairs() {
+    private Repairs() {
 
     }
 
@@ -125,6 +125,8 @@ public class Repairs {
         sb.append('}');
         return sb.toString();
     }
+
+
 }
 
 
