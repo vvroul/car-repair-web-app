@@ -62,6 +62,8 @@ public class Users {
     private Users() {
     }
 
+
+
     public Long getU_id() {
         return u_id;
     }

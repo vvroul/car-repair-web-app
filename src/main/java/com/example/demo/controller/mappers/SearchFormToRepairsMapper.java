@@ -10,7 +10,7 @@ public class SearchFormToRepairsMapper {
     public RepairsModel mapToRepairsModel(RepairsSearchForm searchForm) {
         RepairsModel repairModel = new RepairsModel();
         repairModel.setDateTime(searchForm.getDateTime());
-        repairModel.setOwner(searchForm.getOwner());
+        //repairModel.setOwner(searchForm.getOwner());
         return repairModel;
     }
 }

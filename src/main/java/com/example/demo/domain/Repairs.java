@@ -17,6 +17,7 @@ public class Repairs {
     private Long r_id;
 
     @Column(name = "dateTime")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateTime;
 
     @Enumerated(EnumType.STRING)

@@ -3,12 +3,14 @@ package com.example.demo.model;
 import com.example.demo.domain.Users;
 import com.example.demo.enumeration.RepairStateEnum;
 import com.example.demo.enumeration.RepairTypeEnum;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 import java.util.Date;
 
 public class RepairsModel {
     private Long r_id;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateTime;
     private RepairStateEnum rState;
     private RepairTypeEnum rType;
