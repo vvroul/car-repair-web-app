@@ -11,7 +11,7 @@ public class Users {
     private static final int MAX_NAME_LENGTH = 30;
 
     @Id
-    @Column(name="user_id", nullable = false)
+    @Column(name="u_id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long u_id;
 
@@ -33,14 +33,14 @@ public class Users {
     @Column(name = "password", length = MAX_NAME_LENGTH)
     private String password;
 
-    @Column(name = "vehicle_type")
+    @Column(name = "vType")
     private String vType;
 
-    @Column(name = "vehicle_plate")
-    private String VPlate;
+    @Column(name = "vPlate")
+    private String vPlate;
 
-    @Enumerated(EnumType.ORDINAL)
-    @Column(name = "user_type")
+    @Enumerated(EnumType.STRING)
+    @Column(name = "uType")
     private UserTypeEnum uType;
 
     @OneToMany(mappedBy = "owner", targetEntity = Repairs.class)
@@ -54,9 +54,9 @@ public class Users {
         this.email = email;
         this.password = password;
         this.address = address;
-        this.uType = uType;
         this.vType = vType;
-        this.VPlate = vPlate;
+        this.vPlate = vPlate;
+        this.uType = uType;
     }
 
     private Users() {
@@ -118,12 +118,12 @@ public class Users {
         this.vType = vType;
     }
 
-    public String getVPlate() {
-        return VPlate;
+    public String getvPlate() {
+        return vPlate;
     }
 
-    public void setVPlate(String VPlate) {
-        this.VPlate = VPlate;
+    public void setvPlate(String vPlate) {
+        this.vPlate = vPlate;
     }
 
     public UserTypeEnum getuType() {
@@ -160,7 +160,7 @@ public class Users {
         sb.append(", email='").append(email).append('\'');
         sb.append(", password='").append(password).append('\'');
         sb.append(", vType='").append(vType).append('\'');
-        sb.append(", VPlate='").append(VPlate).append('\'');
+        sb.append(", vPlate='").append(vPlate).append('\'');
         sb.append(", uType=").append(uType);
         sb.append('}');
         return sb.toString();

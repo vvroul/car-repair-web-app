@@ -55,4 +55,5 @@ rType, enumerated (mikri, megali)
 rCost, double
 owner, integer foreign key refers to users.uid
 description, string
+
 ===============================================================================
