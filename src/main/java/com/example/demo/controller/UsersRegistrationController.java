@@ -18,6 +18,7 @@ import com.example.demo.utils.GlobalAttributes;
 import javax.validation.Valid;
 
 @Controller
+@RequestMapping("/admin")
 public class UsersRegistrationController {
 
     private static final String REGISTER_FORM = "registerForm";

@@ -1,7 +1,7 @@
 <#import "/spring.ftl" as spring />
 <h2 class="hello-title">Register</h2>
 
-<form action="/register" name="registerForm" method="POST">
+<form action="/admin/register" name="registerForm" method="POST">
     <div>
         <label for="afm">AFM</label>
         <@spring.bind "registerForm.afm"/>

@@ -40,7 +40,7 @@
 <#--/////////  Create button-->
 <p>
     <div>
-        <form method="get" action="/register">
+        <form method="get" action="/admin/register">
             <input type="submit" value="Create" />
         </form>
     </div>

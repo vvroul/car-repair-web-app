@@ -2,6 +2,7 @@ package com.example.demo.domain;
 
 import com.example.demo.enumeration.RepairStateEnum;
 import com.example.demo.enumeration.RepairTypeEnum;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 import javax.persistence.*;
