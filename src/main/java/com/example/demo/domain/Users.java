@@ -18,9 +18,6 @@ public class Users {
     @Column(name = "aFM", nullable = false)
     private Long aFM;
 
-    @Column(name = "address")
-    private String address;
-
     @Column(name = "firstName", length = MAX_NAME_LENGTH)
     private String firstName;
 
@@ -32,6 +29,9 @@ public class Users {
 
     @Column(name = "password", length = MAX_NAME_LENGTH)
     private String password;
+
+    @Column(name = "address")
+    private String address;
 
     @Column(name = "vType")
     private String vType;
@@ -46,7 +46,7 @@ public class Users {
     @OneToMany(mappedBy = "owner", targetEntity = Repairs.class)
     private List<Repairs> repairs;
 
-    public Users(Long u_id, Long aFM, String firstName, String lastName, String address, String email, String password, UserTypeEnum uType, String vType, String vPlate) {
+    public Users(Long u_id, Long aFM, String firstName, String lastName, String email, String password, String address, UserTypeEnum uType, String vType, String vPlate) {
         this.u_id = u_id;
         this.aFM = aFM;
         this.firstName = firstName;
@@ -159,6 +159,7 @@ public class Users {
         sb.append(", lastName='").append(lastName).append('\'');
         sb.append(", email='").append(email).append('\'');
         sb.append(", password='").append(password).append('\'');
+        sb.append(", address='").append(address).append('\'');
         sb.append(", vType='").append(vType).append('\'');
         sb.append(", vPlate='").append(vPlate).append('\'');
         sb.append(", uType=").append(uType);
