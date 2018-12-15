@@ -16,36 +16,45 @@ public class RepairsBuilder {
     private Users owner;
     private String description;
 
+
     public static RepairsBuilder getRepairsBuilder() {
         return new RepairsBuilder();
     }
 
-    public void setR_id(Long r_id) {
+
+    public RepairsBuilder setR_id(Long r_id) {
         this.r_id = r_id;
+        return this;
     }
 
-    public void setDateTime(Date dateTime) {
+    public RepairsBuilder setDateTime(Date dateTime) {
         this.dateTime = dateTime;
+        return this;
     }
 
-    public void setrState(RepairStateEnum rState) {
+    public RepairsBuilder setrState(RepairStateEnum rState) {
         this.rState = rState;
+        return this;
     }
 
-    public void setrType(RepairTypeEnum rType) {
+    public RepairsBuilder setrType(RepairTypeEnum rType) {
         this.rType = rType;
+        return this;
     }
 
-    public void setrCost(double rCost) {
+    public RepairsBuilder setrCost(double rCost) {
         this.rCost = rCost;
+        return this;
     }
 
-    public void setOwner(Users owner) {
+    public RepairsBuilder setOwner(Users owner) {
         this.owner = owner;
+        return this;
     }
 
-    public void setDescription(String description) {
+    public RepairsBuilder setDescription(String description) {
         this.description = description;
+        return this;
     }
 
     public Repairs createRepairs() {

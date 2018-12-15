@@ -70,14 +70,4 @@ public class RepairsModel {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public RepairsModel (Long r_id, Date dateTime, RepairStateEnum rState,RepairTypeEnum rType, double rCost, Users owner, String description) {
-        this.r_id = r_id;
-        this.dateTime = dateTime;
-        this.rState = rState;
-        this.rType = rType;
-        this.rCost = rCost;
-        this.owner = owner;
-        this.description = description;
-    }
 }

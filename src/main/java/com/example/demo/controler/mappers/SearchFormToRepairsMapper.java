@@ -1,4 +1,4 @@
-package com.example.demo.mappers;
+package com.example.demo.controler.mappers;
 
 import com.example.demo.form.RepairsSearchForm;
 import com.example.demo.model.RepairsModel;
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 public class SearchFormToRepairsMapper {
 
     public RepairsModel mapToRepairsModel(RepairsSearchForm searchForm) {
-        RepairsModel repairModel = new RepairsModel(
-                searchForm.getR_id(),
-                searchForm.getOwner());
+        RepairsModel repairModel = new RepairsModel();
+        repairModel.setDateTime(searchForm.getDateTime());
+        repairModel.setOwner(searchForm.getOwner());
         return repairModel;
     }
 }

@@ -2,17 +2,19 @@ package com.example.demo.form;
 
 import com.example.demo.domain.Users;
 
+import java.util.Date;
+
 public class RepairsSearchForm {
 
-    private Long r_id;
+    private Date dateTime;
     private Users owner;
 
-    public Long getR_id() {
-        return r_id;
+    public Date getDateTime() {
+        return dateTime;
     }
 
-    public void setR_id(Long r_id) {
-        this.r_id = r_id;
+    public void setDateTime(Date dateTime) {
+        this.dateTime = dateTime;
     }
 
     public Users getOwner() {

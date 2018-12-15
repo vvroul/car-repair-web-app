@@ -6,7 +6,7 @@ import com.example.demo.enumeration.RepairTypeEnum;
 
 import java.util.Date;
 
-public class RepairsRegisterForm {
+public class RepairsCreateForm {
 
     private Long r_id;
     private Date dateTime;
