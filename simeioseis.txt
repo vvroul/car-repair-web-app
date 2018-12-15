@@ -57,3 +57,10 @@ owner, integer foreign key refers to users.uid
 description, string
 
 ===============================================================================
+
+-> query gia REPAIRS SEARCH
+
+SELECT r.dateTime, u.aFM, u.vPlate
+FROM USERS u
+INNER JOIN REPAIRS r ON u.u_id = r.owner
+WHERE r.dateTime = "........" OR u.aFM = "......." OR u.vPlate = "........"
