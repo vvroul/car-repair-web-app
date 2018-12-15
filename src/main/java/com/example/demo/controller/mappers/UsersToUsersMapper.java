@@ -19,7 +19,7 @@ public class UsersToUsersMapper {
         userModel.setAddress(users.getAddress());
         userModel.setuType(users.getuType());
         userModel.setvType(users.getvType());
-        userModel.setVPlate(users.getVPlate());
+        userModel.setVPlate(users.getvPlate());
         return userModel;
     }
 }

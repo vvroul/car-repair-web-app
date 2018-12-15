@@ -2,18 +2,19 @@ package com.example.demo.forms;
 
 import com.example.demo.domain.Users;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class RepairsSearchForm {
 
-    private Date dateTime;
+    private LocalDate dateTime;
     private Users owner;
 
-    public Date getDateTime() {
+    public LocalDate getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(Date dateTime) {
+    public void setDateTime(LocalDate dateTime) {
         this.dateTime = dateTime;
     }
 

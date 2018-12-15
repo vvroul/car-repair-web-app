@@ -2,9 +2,8 @@ package com.example.demo.domain;
 
 import com.example.demo.enumeration.RepairStateEnum;
 import com.example.demo.enumeration.RepairTypeEnum;
-import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.List;
+
+import java.time.LocalDate;
 import javax.persistence.*;
 
 @Entity
@@ -17,7 +16,7 @@ public class Repairs {
     private Long r_id;
 
     @Column(name = "dateTime")
-    private Date dateTime;
+    private LocalDate dateTime;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "rState")
@@ -40,7 +39,7 @@ public class Repairs {
 
 
 
-    public Repairs(Long r_id,Date dateTime, RepairStateEnum rState, RepairTypeEnum rType, Double rCost, Users owner, String description) {
+    public Repairs(Long r_id, LocalDate dateTime, RepairStateEnum rState, RepairTypeEnum rType, Double rCost, Users owner, String description) {
         this.r_id = r_id;
         this.dateTime = dateTime;
         this.rState = rState;
@@ -62,11 +61,11 @@ public class Repairs {
         this.r_id = r_id;
     }
 
-    public Date getDateTime() {
+    public LocalDate getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(Date dateTime) {
+    public void setDateTime(LocalDate dateTime) {
         this.dateTime = dateTime;
     }
 

@@ -17,22 +17,22 @@ insert into USERS (AFM, firstName, lastName, email, password, vType, vPlate, uTy
 
 
 
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-10-15 10:30:00', 'WAITING', 'BIG', 50, 1, 'paei kala' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-10-16 11:30:00', 'WAITING', 'LITTLE', 100, 2, 'paei kalaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-10-17 12:30:00', 'ONGOING', 'BIG', 150, 3, 'paei kalaaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-10-18 13:30:00', 'ONGOING', 'LITTLE', 200, 4, 'paei kalaaaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-10-19 14:30:00', 'COMPLETED', 'BIG', 250, 5, 'paei kalaaaaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-10-20 15:30:00', 'COMPLETED', 'LITTLE', 300, 6, 'paei kalaaaaaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-11-15 10:30:00', 'WAITING', 'BIG', 50, 7, 'paei kala' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-11-16 11:30:00', 'WAITING', 'LITTLE', 100, 8, 'paei kalaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-11-17 12:30:00', 'ONGOING', 'BIG', 150, 9, 'paei kalaaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-11-18 13:30:00', 'ONGOING', 'LITTLE', 200, 10, 'paei kalaaaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-11-19 14:30:00', 'COMPLETED', 'BIG', 250, 11, 'paei kalaaaaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-11-20 15:30:00', 'COMPLETED', 'LITTLE', 300, 12, 'paei kalaaaaaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-12-15 10:30:00', 'WAITING', 'BIG', 50, 13, 'paei kala' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-12-16 11:30:00', 'WAITING', 'LITTLE', 100, 14, 'paei kalaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-12-17 12:30:00', 'ONGOING', 'BIG', 150, 15, 'paei kalaaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-12-18 13:30:00', 'ONGOING', 'LITTLE', 200, 1, 'paei kalaaaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-12-19 14:30:00', 'COMPLETED', 'BIG', 250, 2, 'paei kalaaaaa' );
-insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-12-20 15:30:00', 'COMPLETED', 'LITTLE', 300, 3, 'paei kalaaaaaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-10-15', 'WAITING', 'BIG', 50, 1, 'paei kala' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-10-16', 'WAITING', 'LITTLE', 100, 2, 'paei kalaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-10-17', 'ONGOING', 'BIG', 150, 3, 'paei kalaaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-10-18', 'ONGOING', 'LITTLE', 200, 4, 'paei kalaaaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-10-19', 'COMPLETED', 'BIG', 250, 5, 'paei kalaaaaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-10-20', 'COMPLETED', 'LITTLE', 300, 6, 'paei kalaaaaaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-11-15', 'WAITING', 'BIG', 50, 7, 'paei kala' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-11-16', 'WAITING', 'LITTLE', 100, 8, 'paei kalaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-11-17', 'ONGOING', 'BIG', 150, 9, 'paei kalaaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-11-18', 'ONGOING', 'LITTLE', 200, 10, 'paei kalaaaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-11-19', 'COMPLETED', 'BIG', 250, 11, 'paei kalaaaaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-11-20', 'COMPLETED', 'LITTLE', 300, 12, 'paei kalaaaaaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-12-15', 'WAITING', 'BIG', 50, 13, 'paei kala' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-12-16', 'WAITING', 'LITTLE', 100, 14, 'paei kalaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-12-17', 'ONGOING', 'BIG', 150, 15, 'paei kalaaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-12-18', 'ONGOING', 'LITTLE', 200, 1, 'paei kalaaaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-12-19', 'COMPLETED', 'BIG', 250, 2, 'paei kalaaaaa' );
+insert into REPAIRS (dateTime, rState, rType, rCost, owner, description) values ('2018-12-20', 'COMPLETED', 'LITTLE', 300, 3, 'paei kalaaaaaa' );
 

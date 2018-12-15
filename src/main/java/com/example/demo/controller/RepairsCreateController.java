@@ -8,7 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.validation.Valid;
+
+@RequestMapping(value = "/admin")
 
 @Controller
 public class RepairsCreateController {
@@ -20,17 +26,17 @@ public class RepairsCreateController {
     @Autowired
     private CreateFormToRepairsMapper mapper;
 
-    @GetMapping(value = "/admin/repairs")
+    @GetMapping(value = "/create_repairs")
     public String createRepairs (Model model){
         model.addAttribute(CREATION_FORM, new RepairsCreateForm());
-        return "a_repairs";
+        return "create_repairs";
     }
 
-    @PostMapping(value = "/admin/repairs")
-    public String createRepairs (Model model, RepairsCreateForm form){
+    @PostMapping(value = "/create_repairs")
+    public String createRepairs (Model model, @Valid @ModelAttribute(CREATION_FORM) RepairsCreateForm form){
         RepairsModel repairsModel = mapper.mapToRepairsModel(form);
         repairsServiceImpl.create(repairsModel);
-        return "a_repairs";
+        return "create_repairs";
     }
 
 

@@ -4,12 +4,13 @@ import com.example.demo.domain.Users;
 import com.example.demo.enumeration.RepairStateEnum;
 import com.example.demo.enumeration.RepairTypeEnum;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class RepairsCreateForm {
 
     private Long r_id;
-    private Date dateTime;
+    private LocalDate dateTime;
     private RepairStateEnum rState;
     private RepairTypeEnum rType;
     private double rCost;
@@ -24,11 +25,11 @@ public class RepairsCreateForm {
         this.r_id = r_id;
     }
 
-    public Date getDateTime() {
+    public LocalDate getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(Date dateTime) {
+    public void setDateTime(LocalDate dateTime) {
         this.dateTime = dateTime;
     }
 
