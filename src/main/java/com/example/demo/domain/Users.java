@@ -6,22 +6,25 @@ import com.example.demo.enumeration.*;
 
 
 @Entity
-@Table(name = "USERS", uniqueConstraints = {@UniqueConstraint(columnNames = {"email", "password", "AFM"})})
+@Table(name = "USERS", uniqueConstraints = {@UniqueConstraint(columnNames = {"email", "password", "aFM"})})
 public class Users {
     private static final int MAX_NAME_LENGTH = 30;
 
     @Id
-    @Column(name="user_id", nullable = false)
+    @Column(name="u_id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int u_id;
+    private Long u_id;
 
-    @Column(name = "AFM", nullable = false)
-    private Long AFM;
+    @Column(name = "aFM", nullable = false)
+    private Long aFM;
 
-    @Column(name = "firstname", length = MAX_NAME_LENGTH)
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "firstName", length = MAX_NAME_LENGTH)
     private String firstName;
 
-    @Column(name = "lastname", length = MAX_NAME_LENGTH)
+    @Column(name = "lastName", length = MAX_NAME_LENGTH)
     private String lastName;
 
     @Column(name = "email", length = MAX_NAME_LENGTH)
@@ -30,47 +33,49 @@ public class Users {
     @Column(name = "password", length = MAX_NAME_LENGTH)
     private String password;
 
-    @Column(name = "vehicle_type")
+    @Column(name = "vType")
     private String vType;
 
-    @Column(name = "vehicle_plate")
-    private String VPlate;
+    @Column(name = "vPlate")
+    private String vPlate;
 
-    @Enumerated(EnumType.ORDINAL)
-    @Column(name = "user_type")
+    @Enumerated(EnumType.STRING)
+    @Column(name = "uType")
     private UserTypeEnum uType;
 
     @OneToMany(mappedBy = "owner", targetEntity = Repairs.class)
     private List<Repairs> repairs;
 
-
-    public Users(int u_id, Long AFM, String firstName, String lastName, String email, String password, UserTypeEnum uType) {
+    public Users(Long u_id, Long aFM, String firstName, String lastName, String address, String email, String password, UserTypeEnum uType, String vType, String vPlate) {
         this.u_id = u_id;
-        this.AFM = AFM;
+        this.aFM = aFM;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.address = address;
+        this.vType = vType;
+        this.vPlate = vPlate;
         this.uType = uType;
     }
 
     private Users() {
     }
 
-    public int getU_id() {
+    public Long getU_id() {
         return u_id;
     }
 
-    public void setU_id(int u_id) {
+    public void setU_id(Long u_id) {
         this.u_id = u_id;
     }
 
-    public Long getAFM() {
-        return AFM;
+    public Long getaFM() {
+        return aFM;
     }
 
-    public void setAFM(Long AFM) {
-        this.AFM = AFM;
+    public void setaFM(Long aFM) {
+        this.aFM = aFM;
     }
 
     public String getFirstName() {
@@ -113,12 +118,12 @@ public class Users {
         this.vType = vType;
     }
 
-    public String getVPlate() {
-        return VPlate;
+    public String getvPlate() {
+        return vPlate;
     }
 
-    public void setVPlate(String VPlate) {
-        this.VPlate = VPlate;
+    public void setvPlate(String vPlate) {
+        this.vPlate = vPlate;
     }
 
     public UserTypeEnum getuType() {
@@ -137,17 +142,25 @@ public class Users {
         this.repairs = repairs;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Users{");
         sb.append("u_id=").append(u_id);
-        sb.append(", AFM=").append(AFM);
+        sb.append(", aFM=").append(aFM);
         sb.append(", firstName='").append(firstName).append('\'');
         sb.append(", lastName='").append(lastName).append('\'');
         sb.append(", email='").append(email).append('\'');
         sb.append(", password='").append(password).append('\'');
         sb.append(", vType='").append(vType).append('\'');
-        sb.append(", VPlate='").append(VPlate).append('\'');
+        sb.append(", vPlate='").append(vPlate).append('\'');
         sb.append(", uType=").append(uType);
         sb.append('}');
         return sb.toString();
