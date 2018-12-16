@@ -64,8 +64,8 @@
         <div>
              <td>
                 <#--<form method="post" action="/">-->
-        <#--<form method="post" action="/admin/customers">-->
-    <#--<input type="submit"  value="Update"/>-->
+<#--<form method="post" action="/admin/customers">-->
+<#--<input type="submit"  value="Update"/>-->
 <#--</form>-->
                 <a class="btn" href="/admin/customers/${u.u_id}/delete" >Delete</a>
                 <#--</form>-->
