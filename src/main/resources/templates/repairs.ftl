@@ -67,9 +67,7 @@
         </form>
     </div>
     <div>
-        <form method="" action="/">
-            <input type="submit" value="Delete" />
-        </form>
+          <a class="btn" href="/admin/repairs/${r.r_id}/delete" >Delete</a>
     </div>
     </li>
 </#list>

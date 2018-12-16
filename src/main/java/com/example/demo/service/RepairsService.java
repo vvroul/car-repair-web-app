@@ -15,4 +15,6 @@ public interface RepairsService {
 
     List<RepairsModel> getRepairsByDateAndAFMAndPlate(HybridModel hybridModel);
 
+    void deleteRepairsById (Long r_id);
+
 }

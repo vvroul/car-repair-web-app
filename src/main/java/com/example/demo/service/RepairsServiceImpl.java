@@ -55,6 +55,13 @@ public class RepairsServiceImpl implements RepairsService {
                 .collect(Collectors.toList());
 
     }
+
+    @Override
+    public void deleteRepairsById(Long r_id) {
+        repairsJPARepository.deleteById(r_id);
+    }
+
+
 }
 
 
