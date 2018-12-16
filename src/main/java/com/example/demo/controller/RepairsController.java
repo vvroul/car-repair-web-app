@@ -34,5 +34,12 @@ public class RepairsController {
         return "repairs";
     }
 
+    @PostMapping(value = "/repairs")
+    public String updatedRepairs(Model model) {
+        List<RepairsModel> repairs = repairsServiceImpl.getAll();
+        model.addAttribute("repairs", repairs);
+        return "repairs";
+    }
+
 
 }

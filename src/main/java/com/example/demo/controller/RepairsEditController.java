@@ -2,8 +2,10 @@ package com.example.demo.controller;
 
 import com.example.demo.controller.mappers.RepairsToRepairsMapper;
 import com.example.demo.controller.mappers.UsersToUsersMapper;
+import com.example.demo.forms.RepairsEditForm;
 import com.example.demo.forms.UsersEditForm;
 import com.example.demo.forms.UsersRegisterForm;
+import com.example.demo.model.RepairsModel;
 import com.example.demo.model.UsersModel;
 import com.example.demo.service.RepairsService;
 import com.example.demo.service.RepairsServiceImpl;
@@ -35,25 +37,25 @@ public class RepairsEditController {
     private RepairsToRepairsMapper repairsToRepairsMapper;
 
 
-//    @GetMapping(value = "/repairs/{u_id}")
-//    public String updateUsers(@PathVariable(name = "u_id") String  id, Model model) {
-//        UsersModel usersModel = usersService.findUsers(Long.valueOf(id)).orElse(new UsersModel());
-//
-//        UsersEditForm usersEditForm = new UsersEditForm();
-//        usersEditForm.setFirstName(usersModel.getFirstName());
-//        usersEditForm.setLastName(usersModel.getLastName());
-//        usersEditForm.setU_id(id);
-//        model.addAttribute("usersEditForm", usersEditForm);
-//        return "editUsers";
-//    }
-//
-//
-//    @PostMapping(value = "/customers/{u_id}")
-//    public String updateUsers(Model model, @ModelAttribute(name = "usersEditForm")UsersEditForm usersEditForm,
-//                              RedirectAttributes redirectAttributes) {
-//        usersService.update(usersEditForm);
-//        return redirect("/admin/customers");
-//    }
+    @GetMapping(value = "/repairs/{r_id}")
+    public String updateUsers(@PathVariable(name = "r_id") String  id, Model model) {
+        RepairsModel repairsModel = repairsService.findRepairs(Long.valueOf(id)).orElse(new RepairsModel());
+
+        RepairsEditForm repairsEditForm = new RepairsEditForm();
+        repairsEditForm.setDateTime(repairsModel.getDateTime());
+        repairsEditForm.setrType(repairsModel.getrType());
+        repairsEditForm.setR_id(id);
+        model.addAttribute("repairsEditForm", repairsEditForm);
+        return "editRepairs";
+    }
+
+
+    @PostMapping(value = "/repairs/{r_id}")
+    public String updateRepairs(Model model, @ModelAttribute(name = "repairsEditForm")RepairsEditForm repairsEditForm,
+                              RedirectAttributes redirectAttributes) {
+        repairsService.update(repairsEditForm);
+        return redirect("/admin/repairs");
+    }
 
 
     @GetMapping(value = "/repairs/{r_id}/delete")

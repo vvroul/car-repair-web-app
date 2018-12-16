@@ -61,11 +61,11 @@
     <p> ${r.rType!""}</p>
     <p> ${r.rCost!""}</p>
     <p> ${r.description!""}</p>
-    <div>
-        <form method="" action="/">
-            <input type="submit" value="Update" />
-        </form>
-    </div>
+        <div>
+        <td>
+        <a class="btn" href="/admin/repairs/${r.r_id}">Update</a>
+        </td>
+        </div>
     <div>
           <a class="btn" href="/admin/repairs/${r.r_id}/delete" >Delete</a>
     </div>

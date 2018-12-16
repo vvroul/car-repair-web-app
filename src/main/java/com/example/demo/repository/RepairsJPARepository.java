@@ -13,4 +13,6 @@ public interface RepairsJPARepository extends JpaRepository <Repairs, Long>{
     List<Repairs> findRepairsByDateAndAFMAndPlate(LocalDate dateTime, Long aFM, String vPlate);
 
     List<Repairs> findAll();
+
+
 }

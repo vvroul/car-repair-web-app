@@ -3,6 +3,10 @@ package com.example.demo.service;
 import com.example.demo.builder.RepairsBuilder;
 import com.example.demo.controller.mappers.RepairsToRepairsMapper;
 import com.example.demo.domain.Repairs;
+import com.example.demo.domain.Users;
+import com.example.demo.exception.UsersNotFoundException;
+import com.example.demo.forms.RepairsEditForm;
+import com.example.demo.forms.UsersEditForm;
 import com.example.demo.model.HybridModel;
 import com.example.demo.model.RepairsModel;
 import com.example.demo.model.UsersModel;
@@ -11,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -59,6 +64,22 @@ public class RepairsServiceImpl implements RepairsService {
     @Override
     public void deleteRepairsById(Long r_id) {
         repairsJPARepository.deleteById(r_id);
+    }
+
+    @Override
+    public void update(RepairsEditForm repairsEditForm){
+        Repairs repairs = repairsJPARepository.findById(Long.parseLong(repairsEditForm.getR_id())).get();
+        if (repairs==null){throw new UsersNotFoundException();}
+        repairs.setDateTime(repairsEditForm.getDateTime());
+        repairs.setrType(repairsEditForm.getrType());
+        repairsJPARepository.save(repairs);
+    }
+
+    @Override
+    public Optional<RepairsModel> findRepairs(Long id) {
+        return repairsJPARepository
+                .findById(id)
+                .map(repairs -> mapper.mapToRepairsModel(repairs));
     }
 
 
