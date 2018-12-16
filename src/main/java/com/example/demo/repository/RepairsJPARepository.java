@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface RepairsJPARepository extends JpaRepository <Repairs, Long>{
 
-    @Query(value = "SELECT ALL FROM USERS u INNER JOIN REPAIRS r ON u.u_id = r.owner WHERE r.dateTime = ?1 OR u.aFM = ?2 OR u.vPlate = ?3",
+    @Query(value = "SELECT r.* FROM USERS u INNER JOIN REPAIRS r ON u.u_id = r.owner WHERE r.dateTime = ?1 OR u.aFM = ?2 OR u.vPlate = ?3",
     nativeQuery = true)
     List<Repairs> findRepairsByDateAndAFMAndPlate(LocalDate dateTime, Long aFM, String vPlate);
 }
