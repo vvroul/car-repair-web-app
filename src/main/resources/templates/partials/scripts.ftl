@@ -8,6 +8,6 @@
 
 <script src="/js/app.js"></script>
 
-<script src="/js/ajax_example.js"></script>
+<#--<script src="/js/ajax_example.js"></script>-->
 
-<script src="/js/ajax_search_example.js"></script>
+<#--<script src="/js/ajax_search_example.js"></script>-->

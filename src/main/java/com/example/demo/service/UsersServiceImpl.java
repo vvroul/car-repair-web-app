@@ -71,9 +71,14 @@ public class UsersServiceImpl implements UsersService {
     public void update(UsersEditForm usersEditForm){
         Users users = usersRepository.findById(Long.parseLong(usersEditForm.getU_id())).get();
         if (users==null){throw new UsersNotFoundException();}
-        System.out.println("user first name before saving : " + usersEditForm.getFirstName());
         users.setFirstName(usersEditForm.getFirstName());
         users.setLastName(usersEditForm.getLastName());
+        users.setEmail(usersEditForm.getEmail());
+        users.setPassword(usersEditForm.getPassword());
+        users.setAddress(usersEditForm.getAddress());
+        users.setuType(usersEditForm.getuType());
+        users.setvType(usersEditForm.getvType());
+        users.setvPlate(usersEditForm.getVPlate());
         usersRepository.save(users);
     }
 
