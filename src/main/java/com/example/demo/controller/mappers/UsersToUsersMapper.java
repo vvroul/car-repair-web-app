@@ -6,11 +6,15 @@ import com.example.demo.domain.Users;
 import com.example.demo.model.UsersModel;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 public class UsersToUsersMapper {
 
     public UsersModel mapToUserModel(Users users) {
         UsersModel userModel = new UsersModel();
+        userModel.setU_id(users.getU_id());
         userModel.setEmail(users.getEmail());
         userModel.setPassword(users.getPassword());
         userModel.setaFM(users.getaFM());
@@ -22,4 +26,12 @@ public class UsersToUsersMapper {
         userModel.setVPlate(users.getvPlate());
         return userModel;
     }
+
+//    public List<UsersModel> mapToUserModel(List<Users> usersList) {
+//        return usersList
+//                .stream()
+//                .map(this::mapToUserModel)
+//                .collect(Collectors.toList());
+//    }
 }
+

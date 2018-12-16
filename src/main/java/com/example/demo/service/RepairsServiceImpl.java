@@ -44,6 +44,7 @@ public class RepairsServiceImpl implements RepairsService {
             .collect(Collectors.toList());
     }
 
+
     @Override
     public List<RepairsModel> getRepairsByDateAndAFMAndPlate(HybridModel hybridModel) {
         System.out.println("In SERVICE : " + hybridModel.getDateTime());
@@ -55,3 +56,6 @@ public class RepairsServiceImpl implements RepairsService {
 
     }
 }
+
+
+

@@ -1,4 +1,5 @@
 <#import "/spring.ftl" as spring />
+<#if users??>
 <h2 class="hello-title">Customers </h2>
 
 <link rel="stylesheet" type="text/css" href="../css/customers.css">
@@ -48,6 +49,7 @@
 
 <#--END OF Crate button-->
 <p>
+
     <ul>
         <#list users as u>
         <li>
@@ -55,15 +57,23 @@
         <p> ${u.lastName}</p>
         <p> ${u.aFM}</p>
         <div>
-            <form method="" action="/">
-                <input type="submit" value="Update" />
-            </form>
+            <td>
+                <a class="btn" href="/admin/customers/${u.u_id}">Update</a>
+            </td>
         </div>
         <div>
-        <form method="" action="/">
-            <input type="submit" value="Delete" />
-        </form>
+             <td>
+                <#--<form method="post" action="/">-->
+<#--<form method="post" action="/admin/customers">-->
+<#--<input type="submit"  value="Update"/>-->
+<#--</form>-->
+                <a class="btn" href="/admin/customers/${u.u_id}/delete" >Delete</a>
+                <#--</form>-->
+             </td>
+
         </div>
+
+
         </li>
         </#list>
 
@@ -71,3 +81,4 @@
 
 </p>
 </body>
+</#if>

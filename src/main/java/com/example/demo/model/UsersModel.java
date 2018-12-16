@@ -4,6 +4,7 @@ import com.example.demo.enumeration.UserTypeEnum;
 
 public class UsersModel {
 
+    private Long u_id;
     private String email;
     private String password;
     private String firstName;
@@ -84,5 +85,13 @@ public class UsersModel {
 
     public void setVPlate(String VPlate) {
         this.VPlate = VPlate;
+    }
+
+    public Long getU_id() {
+        return u_id;
+    }
+
+    public void setU_id(Long u_id) {
+        this.u_id = u_id;
     }
 }
