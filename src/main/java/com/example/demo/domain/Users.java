@@ -45,6 +45,7 @@ public class Users {
 
     @OneToMany(mappedBy = "owner", targetEntity = Repairs.class)
     private List<Repairs> repairs;
+    //private List<Users> users;
 
     public Users(Long u_id, Long aFM, String firstName, String lastName, String address, String email, String password, UserTypeEnum uType, String vType, String vPlate) {
         this.u_id = u_id;

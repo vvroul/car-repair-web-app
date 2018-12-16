@@ -5,7 +5,9 @@ import com.example.demo.controller.mappers.RegisterFormToUsersMapper;
 import com.example.demo.controller.mappers.UsersToUsersMapper;
 import com.example.demo.domain.Users;
 import com.example.demo.exception.UsersNotFoundException;
+import com.example.demo.forms.UsersEditForm;
 import com.example.demo.forms.UsersRegisterForm;
+import com.example.demo.forms.UsersSearchForm;
 import com.example.demo.model.UsersModel;
 import com.example.demo.repository.UsersJPARepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,4 +58,28 @@ public class UsersServiceImpl implements UsersService {
                 .collect(Collectors.toList());
 
     }
+
+
+    @Override
+    public Optional<UsersModel> findUsers(Long id) {
+        return usersRepository
+                .findById(id)
+                .map(users -> mapper.mapToUserModel(users));
+    }
+
+    @Override
+    public void update(UsersEditForm usersEditForm){
+        Users users = usersRepository.findById(Long.parseLong(usersEditForm.getU_id())).get();
+        if (users==null){throw new UsersNotFoundException();}
+        System.out.println("user first name before saving : " + usersEditForm.getFirstName());
+        users.setFirstName(usersEditForm.getFirstName());
+        users.setLastName(usersEditForm.getLastName());
+        usersRepository.save(users);
+    }
+
+
+
+    @Override
+    public void deleteUsersById(Long u_id) {usersRepository.deleteById(u_id);}
+
 }

@@ -26,13 +26,16 @@ public class CustomersController {
     @Autowired
     UsersServiceImpl usersServiceImpl;
 
-//    @GetMapping("/customers")
-//    public String customers(ModelMap model) {
-//        return "customers";
-//    }
 
     @GetMapping(value = "/customers")
     public String customers(Model model) {
+        List<UsersModel> users = usersServiceImpl.getAll();
+        model.addAttribute("users", users);
+        return "customers";
+    }
+
+    @PostMapping(value = "/customers")
+    public String updatedCustomers(Model model) {
         List<UsersModel> users = usersServiceImpl.getAll();
         model.addAttribute("users", users);
         return "customers";

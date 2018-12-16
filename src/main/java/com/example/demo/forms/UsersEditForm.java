@@ -2,12 +2,12 @@ package com.example.demo.forms;
 
 import com.example.demo.domain.Repairs;
 import com.example.demo.enumeration.UserTypeEnum;
+
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.util.List;
 
-
-public class UsersRegisterForm {
+public class UsersEditForm {
     private static final String PASSWORD_PATTERN = "^[a-zA-Z0-9@#$%^&]*$";
 
     private static final String MAIL_PATTERN = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$";
@@ -29,6 +29,18 @@ public class UsersRegisterForm {
     private String vType;
     private String VPlate;
     private List<Repairs> repairs;
+
+    public static String getPasswordPattern() {
+        return PASSWORD_PATTERN;
+    }
+
+    public static String getMailPattern() {
+        return MAIL_PATTERN;
+    }
+
+    public static int getPasswordMinsize() {
+        return PASSWORD_MINSIZE;
+    }
 
     public String getU_id() {
         return u_id;
@@ -70,6 +82,14 @@ public class UsersRegisterForm {
         this.email = email;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -84,14 +104,6 @@ public class UsersRegisterForm {
 
     public void setuType(UserTypeEnum uType) {
         this.uType = uType;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getvType() {
@@ -117,6 +129,4 @@ public class UsersRegisterForm {
     public void setRepairs(List<Repairs> repairs) {
         this.repairs = repairs;
     }
-
-
 }

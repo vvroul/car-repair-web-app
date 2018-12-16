@@ -41,4 +41,8 @@ public class RepairsServiceImpl implements RepairsService {
             .map(repairs -> mapper.mapToRepairsModel(repairs))
             .collect(Collectors.toList());
     }
-}
+
+
+
+    }
+
