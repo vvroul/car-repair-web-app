@@ -12,7 +12,7 @@ public class RepairsToRepairsMapper {
         repairModel.setR_id(repair.getR_id());
         repairModel.setDateTime(repair.getDateTime());
         repairModel.setrState(repair.getrState());
-        repairModel.setrState(repair.getrState());
+        repairModel.setrType(repair.getrType());
         repairModel.setrCost(repair.getrCost());
         repairModel.setOwner(repair.getOwner());
         repairModel.setDescription(repair.getDescription());

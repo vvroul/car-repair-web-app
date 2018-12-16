@@ -12,7 +12,7 @@ public class CreateFormToRepairsMapper {
         repairModel.setR_id(createForm.getR_id());
         repairModel.setDateTime(createForm.getDateTime());
         repairModel.setrState(createForm.getrState());
-        repairModel.setrState(createForm.getrState());
+        repairModel.setrType(createForm.getrType());
         repairModel.setrCost(createForm.getrCost());
         repairModel.setOwner(createForm.getOwner());
         repairModel.setDescription(createForm.getDescription());

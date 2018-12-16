@@ -38,9 +38,6 @@ public class Repairs {
     @Column(name = "description")
     private String description;
 
-
-
-
     public Repairs(Long r_id, LocalDate dateTime, RepairStateEnum rState, RepairTypeEnum rType, Double rCost, Users owner, String description) {
         this.r_id = r_id;
         this.dateTime = dateTime;

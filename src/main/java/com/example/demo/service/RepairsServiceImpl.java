@@ -46,6 +46,7 @@ public class RepairsServiceImpl implements RepairsService {
 
     @Override
     public List<RepairsModel> getRepairsByDateAndAFMAndPlate(HybridModel hybridModel) {
+        System.out.println("In SERVICE : " + hybridModel.getDateTime());
         return repairsJPARepository.findRepairsByDateAndAFMAndPlate(hybridModel.getDateTime(),
                 hybridModel.getaFM(), hybridModel.getVPlate())
                 .stream()

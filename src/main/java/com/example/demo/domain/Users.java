@@ -6,7 +6,7 @@ import com.example.demo.enumeration.*;
 
 
 @Entity
-@Table(name = "USERS", uniqueConstraints = {@UniqueConstraint(columnNames = {"email", "password", "aFM"})})
+@Table(name = "USERS", uniqueConstraints = {@UniqueConstraint(columnNames = {"email", "password", "aFM"})},  schema = "team8db")
 public class Users {
     private static final int MAX_NAME_LENGTH = 30;
 

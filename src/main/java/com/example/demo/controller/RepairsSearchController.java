@@ -3,6 +3,8 @@ package com.example.demo.controller;
 import com.example.demo.controller.mappers.SearchFormToHybridMapper;
 import com.example.demo.controller.mappers.SearchFormToRepairsMapper;
 import com.example.demo.controller.mappers.SearchFormToUsersMapper;
+import com.example.demo.enumeration.RepairStateEnum;
+import com.example.demo.enumeration.RepairTypeEnum;
 import com.example.demo.forms.RepairsSearchForm;
 import com.example.demo.forms.UsersSearchForm;
 import com.example.demo.model.HybridModel;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.time.LocalDate;
+import java.util.List;
 
 @RequestMapping(value = "/admin")
 @Controller
@@ -30,23 +33,11 @@ public class RepairsSearchController {
     private SearchFormToHybridMapper repairsMapper;
 
     @PostMapping(value = "/repairsSearch")
-    public String searchRepairs (Model model, @Valid @ModelAttribute(REPAIRS_SEARCH_FORM) RepairsSearchForm repairsForm,
-                                 @RequestParam(value = "aFM", required = false, defaultValue = "") Long aFM,
-                                 @RequestParam(value = "vPlate", required = false, defaultValue = "") String vPlate,
-                                 @RequestParam(value = "dateTime", required = false, defaultValue = "")
-                                     @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate dateTime ) {
+    public String searchRepairs (Model model, @Valid @ModelAttribute(REPAIRS_SEARCH_FORM) RepairsSearchForm repairsForm) {
 
         HybridModel hybridModel = repairsMapper.mapToHybridModel(repairsForm);
-        aFM = hybridModel.getaFM();
-        vPlate = hybridModel.getVPlate();
-        dateTime = hybridModel.getDateTime();
-        model.addAttribute("aFM", aFM);
-        model.addAttribute("vPlate", vPlate);
-        model.addAttribute("dateTime", dateTime);
-        repairsServiceImpl.getRepairsByDateAndAFMAndPlate(hybridModel);
+        List<RepairsModel> theRepairs = repairsServiceImpl.getRepairsByDateAndAFMAndPlate(hybridModel);
+        model.addAttribute("adminRepairs", theRepairs);
         return "displayRepairsResults";
     }
-
-
-
 }

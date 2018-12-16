@@ -11,6 +11,7 @@ public class SearchFormToHybridMapper {
     public HybridModel mapToHybridModel(RepairsSearchForm searchForm) {
         HybridModel hybridModel = new HybridModel();
         hybridModel.setDateTime(searchForm.getDateTime());
+        System.out.println("In Mapper to model  : " + searchForm.getDateTime());
         hybridModel.setaFM(searchForm.getaFM());
         hybridModel.setVPlate(searchForm.getvPlate());
         return hybridModel;

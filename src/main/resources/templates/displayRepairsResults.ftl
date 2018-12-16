@@ -6,19 +6,28 @@
 
 <body>
 <h2>We found you these repair results : </h2>
-<table>
-    <h2> Repair with : </h2>
-    <tr>
-        <td>Datetime :</td>
-        <td>${dateTime!""}</td>
-    </tr>
-    <tr>
-        <td>AFM :</td>
-        <td>${aFM!""}</td>
-    </tr>
-    <tr>
-        <td>Plate :</td>
-        <td>${vPlate!""}</td>
-    </tr>
-</table>
+    <p><ul>
+            <#list adminRepairs as r>
+            <li>
+    <p> ${r.dateTime!""}</p>
+    <p> ${r.rState!""}</p>
+    <p> ${r.rType!""}</p>
+    <p> ${r.rCost!""}</p>
+    <p> ${r.description!""}</p>
+    <div>
+        <form method="" action="/">
+            <input type="submit" value="Update" />
+        </form>
+    </div>
+    <div>
+        <form method="" action="/">
+            <input type="submit" value="Delete" />
+        </form>
+    </div>
+    </li>
+    </#list>
+
+    </ul>
+
+    </p>
 </body>
