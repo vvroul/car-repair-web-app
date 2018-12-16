@@ -2,7 +2,7 @@ package com.example.demo.enumeration;
 
 public enum RepairStateEnum
 {
-    AWAITING(1),
+    WAITING(1),
     ONGOING(2),
     COMPLETED(3);
 
@@ -22,6 +22,6 @@ public enum RepairStateEnum
                 return value;
             }
         }
-        return AWAITING; //default
+        return WAITING; //default
     }
 }

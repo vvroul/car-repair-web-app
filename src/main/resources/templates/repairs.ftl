@@ -41,4 +41,40 @@
         </div>
     </div>
 <#--END OF Search form-->
+
+<#--/////////  Create button-->
+    <p>
+    <div>
+        <form method="get" action="/admin/create_repairs">
+            <input type="submit" value="Create" />
+        </form>
+    </div>
+    </p>
+
+<#--END OF Crate button-->
+<p>
+    <ul>
+        <#list theRepairs as r>
+        <li>
+    <p> ${r.dateTime!""}</p>
+    <p> ${r.rState!""}</p>
+    <p> ${r.rType!""}</p>
+    <p> ${r.rCost!""}</p>
+    <p> ${r.description!""}</p>
+    <div>
+        <form method="" action="/">
+            <input type="submit" value="Update" />
+        </form>
+    </div>
+    <div>
+        <form method="" action="/">
+            <input type="submit" value="Delete" />
+        </form>
+    </div>
+    </li>
+</#list>
+
+</ul>
+
+</p>
 </body>

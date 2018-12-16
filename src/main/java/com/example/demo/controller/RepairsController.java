@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.controller.mappers.SearchFormToUsersMapper;
 import com.example.demo.controller.mappers.UsersToUsersMapper;
 import com.example.demo.domain.Users;
+import com.example.demo.model.RepairsModel;
 import com.example.demo.model.UsersModel;
 import com.example.demo.service.*;
 
@@ -28,8 +29,8 @@ public class RepairsController {
 
     @GetMapping(value = "/repairs")
     public String repairs(Model model) {
-//        List<UsersModel> users = repairsServiceImpl.getAll();
-//        model.addAttribute("users", users);
+        List<RepairsModel> repairs = repairsServiceImpl.getAll();
+        model.addAttribute("theRepairs", repairs);
         return "repairs";
     }
 
