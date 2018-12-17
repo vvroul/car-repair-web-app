@@ -71,7 +71,10 @@ public class RepairsServiceImpl implements RepairsService {
         Repairs repairs = repairsJPARepository.findById(Long.parseLong(repairsEditForm.getR_id())).get();
         if (repairs==null){throw new UsersNotFoundException();}
         repairs.setDateTime(repairsEditForm.getDateTime());
+        repairs.setrState(repairsEditForm.getrState());
         repairs.setrType(repairsEditForm.getrType());
+        repairs.setrCost(repairsEditForm.getrCost());
+        repairs.setDescription(repairsEditForm.getDescription());
         repairsJPARepository.save(repairs);
     }
 

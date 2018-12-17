@@ -43,7 +43,10 @@ public class RepairsEditController {
 
         RepairsEditForm repairsEditForm = new RepairsEditForm();
         repairsEditForm.setDateTime(repairsModel.getDateTime());
+        repairsEditForm.setrState(repairsModel.getrState());
         repairsEditForm.setrType(repairsModel.getrType());
+        repairsEditForm.setrCost(repairsModel.getrCost());
+        repairsEditForm.setDescription(repairsModel.getDescription());
         repairsEditForm.setR_id(id);
         model.addAttribute("repairsEditForm", repairsEditForm);
         return "editRepairs";
