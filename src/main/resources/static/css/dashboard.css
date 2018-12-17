@@ -5,6 +5,7 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
+  margin-bottom: 60px; /*=gia to footer=*/
 }
 
 
@@ -108,8 +109,27 @@ body {
 }
 
 /*extra css style classes*/
+/*==starter-template==*/
 .starter-template {
   padding: 40px 15px;
   text-align: center;
   background-color: lightgrey;
 }
+/*==footer==*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+/*-----------------------------------*/

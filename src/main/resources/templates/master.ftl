@@ -8,7 +8,7 @@
 <div class="container-fluid">
 
 </div>
-
+<#include "/partials/footer.ftl">
 <#include "/partials/scripts.ftl">
 </body>
 </html>

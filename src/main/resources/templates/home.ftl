@@ -14,10 +14,11 @@
         <p class="lead">You want the best care for your vehicle?<br>
             We got you covered!<br>
             Find out your vehicle's repair status at the leisure of your home<br>
-            by entering your credentials at the login form!!
+            by entering your credentials at the sign-in form!!
         </p>
     </div>
 </div>
+<#include "/partials/footer.ftl">
 <#include "/partials/scripts.ftl">
 </body>
 </html>
