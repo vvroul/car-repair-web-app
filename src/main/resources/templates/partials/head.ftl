@@ -2,7 +2,7 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 
-<link href="favicon.png" rel="icon">
+<#--<link href="favicon.png" rel="icon">-->
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/dashboard.css" rel="stylesheet">

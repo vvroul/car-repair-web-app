@@ -47,7 +47,7 @@
     </div>
 </p>
 
-<#--END OF Crate button-->
+<#--END OF Create button-->
 <p>
 
     <ul>
@@ -55,7 +55,13 @@
         <li>
         <p> ${u.firstName}</p>
         <p> ${u.lastName}</p>
-        <p> ${u.aFM}</p>
+        <#--<p> ${u.aFM}</p>-->
+        <#--<p> ${u.email}</p>-->
+        <#--<p>${u.password}</p>-->
+        <#--<p>${u.address}</p>-->
+        <#--<p>${u.uType}</p>-->
+        <#--<p>${u.vType}</p>-->
+        <#--<p>${u.Vplate}</p>-->
         <div>
             <td>
                 <a class="btn" href="/admin/customers/${u.u_id}">Update</a>

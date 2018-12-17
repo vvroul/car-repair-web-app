@@ -37,8 +37,16 @@ public class UsersEditController {
         UsersModel usersModel = usersService.findUsers(Long.valueOf(id)).orElse(new UsersModel());
 
         UsersEditForm usersEditForm = new UsersEditForm();
+        usersEditForm.setAfm(usersEditForm.getAfm());
         usersEditForm.setFirstName(usersModel.getFirstName());
         usersEditForm.setLastName(usersModel.getLastName());
+        usersEditForm.setEmail(usersModel.getEmail());
+        usersEditForm.setPassword(usersModel.getPassword());
+        usersEditForm.setAddress(usersModel.getAddress());
+        usersEditForm.setuType(usersModel.getuType());
+        usersEditForm.setvType(usersModel.getvType());
+        usersEditForm.setVPlate(usersModel.getVPlate());
+
         usersEditForm.setU_id(id);
         model.addAttribute("usersEditForm", usersEditForm);
         return "editUsers";
