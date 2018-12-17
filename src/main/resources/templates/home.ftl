@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
     <#include "/partials/head.ftl">
-    <title>Fanartzidiko "TEAM8"</title>
+    <title>AUTO REPAIRS ""TEAM-8</title>
 </head>
 <body>
 
-<#include "/partials/sidebar.ftl">
+<#include "/partials/navbarHome.ftl">
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar"
-             <#include "/partials/sidebar.ftl">
-    </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="starter-template">
+        <h1>Welcome to "TEAM-8" Auto Repair Shop</h1>
+        <p class="lead">You want the best care for your vehicle?<br>
+            We got you covered!<br>
+            Find out your vehicle's repair status at the leisure of your home<br>
+            by entering your credentials at the login form!!
+        </p>
     </div>
 </div>
 <#include "/partials/scripts.ftl">
