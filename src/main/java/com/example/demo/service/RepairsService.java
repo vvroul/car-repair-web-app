@@ -23,4 +23,6 @@ public interface RepairsService {
 
     Optional<RepairsModel> findRepairs(Long id);
 
+    List<RepairsModel> getFirst10tByDateTime();
+
 }

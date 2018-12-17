@@ -2,6 +2,7 @@ package com.example.demo.repository;
 
 import com.example.demo.domain.Repairs;
 import com.example.demo.domain.Users;
+import com.example.demo.model.RepairsModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -14,5 +15,6 @@ public interface RepairsJPARepository extends JpaRepository <Repairs, Long>{
 
     List<Repairs> findAll();
 
+    List<Repairs> findFirst10tByDateTime();
 
 }

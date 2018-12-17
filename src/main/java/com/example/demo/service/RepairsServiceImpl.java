@@ -85,6 +85,15 @@ public class RepairsServiceImpl implements RepairsService {
                 .map(repairs -> mapper.mapToRepairsModel(repairs));
     }
 
+    @Override
+    public List<RepairsModel> getFirst10tByDateTime() {
+        return repairsJPARepository
+                .findFirst10tByDateTime()
+                .stream()
+                .map(repairs -> mapper.mapToRepairsModel(repairs))
+                .collect(Collectors.toList());
+    }
+
 
 }
 
