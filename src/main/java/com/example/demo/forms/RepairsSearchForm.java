@@ -10,14 +10,14 @@ public class RepairsSearchForm {
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateTime;
-    private Long aFM;
+    private String aFM;
     private String vPlate;
 
-    public Long getaFM() {
+    public String getaFM() {
         return aFM;
     }
 
-    public void setaFM(Long aFM) {
+    public void setaFM(String aFM) {
         this.aFM = aFM;
     }
 

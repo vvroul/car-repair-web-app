@@ -13,7 +13,7 @@ public class UsersModel {
     private UserTypeEnum uType;
     private String vType;
     private String VPlate;
-    private Long aFM;
+    private String aFM;
 
     public String getEmail() {
         return email;
@@ -31,11 +31,11 @@ public class UsersModel {
         this.password = password;
     }
 
-    public Long getaFM() {
+    public String getaFM() {
         return aFM;
     }
 
-    public void setaFM(Long aFM) {
+    public void setaFM(String aFM) {
         this.aFM = aFM;
     }
 

@@ -9,7 +9,7 @@ public class HybridModel {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateTime;
     private String VPlate;
-    private Long aFM;
+    private String aFM;
 
     public LocalDate getDateTime() {
         return dateTime;
@@ -27,11 +27,11 @@ public class HybridModel {
         this.VPlate = VPlate;
     }
 
-    public Long getaFM() {
+    public String getaFM() {
         return aFM;
     }
 
-    public void setaFM(Long aFM) {
+    public void setaFM(String aFM) {
         this.aFM = aFM;
     }
 }

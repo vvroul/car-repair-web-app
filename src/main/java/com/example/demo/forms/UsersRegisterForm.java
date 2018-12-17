@@ -15,7 +15,7 @@ public class UsersRegisterForm {
     private static final int PASSWORD_MINSIZE = 6;
 
     private String u_id;
-    private Long afm;
+    private String afm;
     private String firstName;
     private String lastName;
     @Pattern(regexp = MAIL_PATTERN, message = "Invalid Mail")
@@ -38,11 +38,11 @@ public class UsersRegisterForm {
         this.u_id = u_id;
     }
 
-    public Long getAfm() {
+    public String getAfm() {
         return afm;
     }
 
-    public void setAfm(Long afm) {
+    public void setAfm(String afm) {
         this.afm = afm;
     }
 

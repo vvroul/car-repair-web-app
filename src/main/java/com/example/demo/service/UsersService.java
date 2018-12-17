@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public interface UsersService {
 
-    Users getUsersByAFMAndEmail(Long aFM, String email);
+    Users getUsersByAFMAndEmail(String aFM, String email);
 
     UsersModel create(UsersModel users);
 

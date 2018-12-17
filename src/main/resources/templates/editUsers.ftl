@@ -3,14 +3,14 @@
 </h2>
 
 <form action="/admin/customers/{u_id}" name="usersEditForm" method="POST">
-    <#--<div>-->
-        <#--<label for="afm">AFM</label>-->
-        <#--<@spring.bind "usersEditForm.afm"/>-->
-            <#--<input type="afm" name="afm" id="afm" placeholder="afm" value="${usersEditForm.afm}">-->
-        <#--<#list spring.status.errorMessages as error>-->
-            <#--<span>${error}</span>-->
-        <#--</#list>-->
-    <#--</div>-->
+    <div>
+        <label for="afm">AFM</label>
+        <@spring.bind "usersEditForm.afm"/>
+            <input type="afm" name="afm" id="afm" placeholder="afm" value="${usersEditForm.afm}">
+        <#list spring.status.errorMessages as error>
+            <span>${error}</span>
+        </#list>
+    </div>
 
     <div>
         <label for="firstName">First name : </label>
@@ -75,14 +75,14 @@
         </#list>
     </div>
 
-    <#--<div>-->
-        <#--<label for="vPlate">Vehicle Plate : </label>-->
-        <#--<@spring.bind "usersEditForm.VPlate"/>-->
-            <#--<input type="vPlate" name="vPlate" id="vPlate" placeholder="vPlate" value="${usersEditForm.VPlate}">-->
-        <#--<#list spring.status.errorMessages as error>-->
-            <#--<span>${error}</span>-->
-        <#--</#list>-->
-    <#--</div>-->
+    <div>
+        <label for="vPlate">Vehicle Plate : </label>
+        <@spring.bind "usersEditForm.VPlate"/>
+            <input type="vPlate" name="vPlate" id="vPlate" placeholder="vPlate" value="${usersEditForm.VPlate}">
+        <#list spring.status.errorMessages as error>
+            <span>${error}</span>
+        </#list>
+    </div>
 
         <input type="submit"  value="Update"/>
         <input type="hidden" class="form-control" name="u_id" id="id" value="${usersEditForm.u_id}">

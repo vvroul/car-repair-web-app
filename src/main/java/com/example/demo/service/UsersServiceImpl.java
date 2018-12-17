@@ -29,7 +29,7 @@ public class UsersServiceImpl implements UsersService {
 
 
     @Override
-    public Users getUsersByAFMAndEmail(Long aFM, String email) {
+    public Users getUsersByAFMAndEmail(String aFM, String email) {
         return usersRepository.findUsersByAFMAndEmail(aFM, email);
     }
 
@@ -73,6 +73,7 @@ public class UsersServiceImpl implements UsersService {
         if (users==null){throw new UsersNotFoundException();}
         users.setFirstName(usersEditForm.getFirstName());
         users.setLastName(usersEditForm.getLastName());
+        users.setaFM(usersEditForm.getAfm());
         users.setEmail(usersEditForm.getEmail());
         users.setPassword(usersEditForm.getPassword());
         users.setAddress(usersEditForm.getAddress());

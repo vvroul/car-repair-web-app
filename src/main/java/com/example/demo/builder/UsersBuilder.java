@@ -9,7 +9,7 @@ import java.util.List;
 
 public class UsersBuilder {
     private Long u_id;
-    private Long afm;
+    private String afm;
     private String firstName;
     private String lastName;
     private String email;
@@ -30,7 +30,7 @@ public class UsersBuilder {
         return this;
     }
 
-    public UsersBuilder setAFM(Long afm) {
+    public UsersBuilder setAFM(String afm) {
         this.afm = afm;
         return this;
     }

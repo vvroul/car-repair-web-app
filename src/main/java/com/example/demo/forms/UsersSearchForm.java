@@ -6,15 +6,15 @@ public class UsersSearchForm {
 
     private static final String MAIL_PATTERN = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$";
 
-    private Long aFM;
+    private String aFM;
     @Pattern(regexp = MAIL_PATTERN, message = "Invalid Mail")
     private String email;
 
-    public Long getaFM() {
+    public String getaFM() {
         return aFM;
     }
 
-    public void setaFM(Long aFM) {
+    public void setaFM(String aFM) {
         this.aFM = aFM;
     }
 

@@ -37,7 +37,7 @@ public class UsersEditController {
         UsersModel usersModel = usersService.findUsers(Long.valueOf(id)).orElse(new UsersModel());
 
         UsersEditForm usersEditForm = new UsersEditForm();
-        usersEditForm.setAfm(usersEditForm.getAfm());
+        usersEditForm.setAfm(usersModel.getaFM());
         usersEditForm.setFirstName(usersModel.getFirstName());
         usersEditForm.setLastName(usersModel.getLastName());
         usersEditForm.setEmail(usersModel.getEmail());

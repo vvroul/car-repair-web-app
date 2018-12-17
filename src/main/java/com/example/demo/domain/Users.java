@@ -15,8 +15,8 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long u_id;
 
-    @Column(name = "aFM", nullable = false)
-    private Long aFM;
+    @Column(name = "aFM", nullable = false, length = MAX_NAME_LENGTH)
+    private String aFM;
 
     @Column(name = "firstName", length = MAX_NAME_LENGTH)
     private String firstName;
@@ -47,7 +47,7 @@ public class Users {
     private List<Repairs> repairs;
     //private List<Users> users;
 
-    public Users(Long u_id, Long aFM, String firstName, String lastName, String email, String password, String address, UserTypeEnum uType, String vType, String vPlate) {
+    public Users(Long u_id, String aFM, String firstName, String lastName, String email, String password, String address, UserTypeEnum uType, String vType, String vPlate) {
         this.u_id = u_id;
         this.aFM = aFM;
         this.firstName = firstName;
@@ -73,11 +73,11 @@ public class Users {
         this.u_id = u_id;
     }
 
-    public Long getaFM() {
+    public String getaFM() {
         return aFM;
     }
 
-    public void setaFM(Long aFM) {
+    public void setaFM(String aFM) {
         this.aFM = aFM;
     }
 

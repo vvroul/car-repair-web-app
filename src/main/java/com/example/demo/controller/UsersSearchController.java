@@ -52,7 +52,7 @@ public class UsersSearchController {
                            @Valid @ModelAttribute(SEARCH_FORM)
                                    UsersSearchForm searchForm,
                            BindingResult bindingResult,
-                         @RequestParam(value = "aFM", required = false, defaultValue = "") Long aFM,
+                         @RequestParam(value = "aFM", required = false, defaultValue = "") String aFM,
                          @RequestParam(value = "email", required = false, defaultValue = "") String email ) {
 
 
