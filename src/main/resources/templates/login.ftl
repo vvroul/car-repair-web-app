@@ -2,7 +2,7 @@
 <head></head>
 <body>
    <h1>Login</h1>
-   <form name='login' action="/login" method='POST'>
+   <form name='login' action="/admin/" method='POST'>
     <#--
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
     -->

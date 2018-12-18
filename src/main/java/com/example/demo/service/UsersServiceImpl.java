@@ -88,4 +88,9 @@ public class UsersServiceImpl implements UsersService {
     @Override
     public void deleteUsersById(Long u_id) {usersRepository.deleteById(u_id);}
 
+    @Override
+    public Users getUsersByEmailAndPassword(String email, String password) {
+        return usersRepository.findUsersByEmailAndPassword(email, password);
+    }
+
 }

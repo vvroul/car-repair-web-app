@@ -36,11 +36,11 @@ public class UsersAdminHomeController {
         return "adminHome";
     }
 
-    @PostMapping(value = "/")
-    public String updatedCustomers(Model model) {
-        List<RepairsModel> topRepairs = repairsServiceImpl.getFirst10RepairsByDateTime();
-        model.addAttribute("topRepairs", topRepairs);
-        return "adminHome";
-    }
+//    @PostMapping(value = "/")
+//    public String updatedCustomers(Model model) {
+//        List<RepairsModel> topRepairs = repairsServiceImpl.getFirst10RepairsByDateTime();
+//        model.addAttribute("topRepairs", topRepairs);
+//        return "adminHome";
+//    }
 
 }

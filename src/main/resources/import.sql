@@ -1,5 +1,5 @@
 
-insert into USERS (AFM, firstName, lastName, email, password, address, vType, vPlate, uType) values (217920488, 'Cicily', 'Bentame', 'cbentame0@engadget.com', 'admin1', ' This Street 1', 'Lincoln', 'UDB-6024', 'ADMIN');
+  insert into USERS (AFM, firstName, lastName, email, password, address, vType, vPlate, uType) values (217920488, 'Cicily', 'Bentame', 'cbentame0@engadget.com', 'admin1', ' This Street 1', 'Lincoln', 'UDB-6024', 'ADMIN');
 insert into USERS (AFM, firstName, lastName, email, password, address, vType, vPlate, uType) values (204072839, 'Lari', 'Beldon', 'lbeldon1@aol.com', 'user1', ' This Street 2', 'Honda', 'GOS-0169', 'USER');
 insert into USERS (AFM, firstName, lastName, email, password, address, vType, vPlate, uType) values (384015104, 'Hadria', 'Hinchon', 'hhinchon2@jigsy.com', 'user2', ' This Street 3', 'Audi', 'JBC-3196', 'USER');
 insert into USERS (AFM, firstName, lastName, email, password, address, vType, vPlate, uType) values (454709690, 'Celia', 'Sealey', 'csealey3@accuweather.com', 'admin2', ' This Street 4', 'Mercedes-Benz', 'FVJ-0618', 'ADMIN');

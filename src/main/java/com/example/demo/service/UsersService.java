@@ -21,4 +21,6 @@ public interface UsersService {
     void update(UsersEditForm usersEditForm);
 
     void deleteUsersById(Long u_id);
+
+    Users getUsersByEmailAndPassword(String email, String password);
 }

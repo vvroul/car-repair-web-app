@@ -18,4 +18,6 @@ public interface UsersJPARepository extends JpaRepository<Users, Long> {
 
     Users save(Users users);
 
+    Users findUsersByEmailAndPassword(String email, String password);
+
 }
