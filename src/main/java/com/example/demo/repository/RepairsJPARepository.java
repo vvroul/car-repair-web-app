@@ -15,6 +15,7 @@ public interface RepairsJPARepository extends JpaRepository <Repairs, Long>{
 
     List<Repairs> findAll();
 
-    List<Repairs> findFirst10tByDateTime();
+    @Query(value = "SELECT r.* FROM REPAIRS r ORDER BY r.dateTime DESC LIMIT 10", nativeQuery = true)
+    List<Repairs> findFirst10RepairsByDateTime();
 
 }

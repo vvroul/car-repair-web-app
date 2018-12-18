@@ -14,6 +14,8 @@ import com.example.demo.repository.RepairsJPARepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -86,9 +88,9 @@ public class RepairsServiceImpl implements RepairsService {
     }
 
     @Override
-    public List<RepairsModel> getFirst10tByDateTime() {
+    public List<RepairsModel> getFirst10RepairsByDateTime() {
         return repairsJPARepository
-                .findFirst10tByDateTime()
+                .findFirst10RepairsByDateTime()
                 .stream()
                 .map(repairs -> mapper.mapToRepairsModel(repairs))
                 .collect(Collectors.toList());

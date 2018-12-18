@@ -6,6 +6,7 @@ import com.example.demo.model.HybridModel;
 import com.example.demo.model.RepairsModel;
 import com.example.demo.model.UsersModel;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,6 +24,6 @@ public interface RepairsService {
 
     Optional<RepairsModel> findRepairs(Long id);
 
-    List<RepairsModel> getFirst10tByDateTime();
+    List<RepairsModel> getFirst10RepairsByDateTime();
 
 }

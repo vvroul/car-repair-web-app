@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Controller
@@ -28,14 +31,14 @@ public class UsersAdminHomeController {
 
     @GetMapping(value = "/")
     public String adminHome(Model model) {
-        List<RepairsModel> topRepairs = repairsServiceImpl.getFirst10tByDateTime();
+        List<RepairsModel> topRepairs = repairsServiceImpl.getFirst10RepairsByDateTime();
         model.addAttribute("topRepairs", topRepairs);
         return "adminHome";
     }
 
     @PostMapping(value = "/")
     public String updatedCustomers(Model model) {
-        List<RepairsModel> topRepairs = repairsServiceImpl.getFirst10tByDateTime();
+        List<RepairsModel> topRepairs = repairsServiceImpl.getFirst10RepairsByDateTime();
         model.addAttribute("topRepairs", topRepairs);
         return "adminHome";
     }
