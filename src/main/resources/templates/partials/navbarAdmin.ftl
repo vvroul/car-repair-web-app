@@ -8,14 +8,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">GREETINGS</a>
+            <a class="navbar-brand" href="/">GREETINGS "..onoma..admin.."</a>
         </div>
         <div class="navbar-collapse collapse" id="navbar">
-
             <ul class="nav navbar-nav navbar-right">
-                <button type="submit" class="btn btn-primary">Customers</button>
-                <button type="submit" class="btn btn-primary">Repairs</button>
-                <button type="submit" class="btn btn-primary">Sign out</button>
+                <button type="button" class="btn btn-primary navbar-btn">Customers</button>
+                <button type="button" class="btn btn-primary navbar-btn">Repairs</button>
+                <button type="button" class="btn btn-danger navbar-btn">Sign out</button>
             </ul>
         </div>
     </div>

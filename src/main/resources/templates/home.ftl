@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <#include "/partials/head.ftl">
-    <title>AUTO REPAIRS ""TEAM-8</title>
+    <title>AUTO REPAIRS "TEAM-8"</title>
 </head>
 <body>
 
