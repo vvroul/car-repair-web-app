@@ -40,11 +40,11 @@ public class LoginController {
         binder.addValidators(loginValidator);
     }
 
-    @GetMapping(value = "/login") public String search(Model model) {
-        model.addAttribute(LOGIN_FORM,
-                new LoginForm());
-        return "login";
-    }
+//    @GetMapping(value = "/") public String search(Model model) {
+//        model.addAttribute(LOGIN_FORM,
+//                new LoginForm());
+//        return "login";
+//    }
 
     @PostMapping(value = "/admin/")
     public String search(Model model,

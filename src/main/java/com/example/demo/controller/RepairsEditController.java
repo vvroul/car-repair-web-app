@@ -49,7 +49,7 @@ public class RepairsEditController {
         repairsEditForm.setDescription(repairsModel.getDescription());
         repairsEditForm.setR_id(id);
         model.addAttribute("repairsEditForm", repairsEditForm);
-        return "editRepairs";
+        return "adminEditRepair";
     }
 
 

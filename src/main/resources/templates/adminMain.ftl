@@ -17,7 +17,7 @@
             <table class="table table-bordered">
                 <thead>
                 <tr>
-                    <th>#</th>
+                    <#--<th>#</th>-->
                     <th>Date</th>
                     <th>State</th>
                     <th>Type</th>
@@ -25,16 +25,24 @@
                     <th>Description</th>
                 </tr>
                 </thead>
+                <#list topRepairs as r>
                 <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>dummy date</td>
-                    <td>dummy state</td>
-                    <td>dummy type</td>
-                    <td>1</td>
-                    <td>dummy description</td>
+                    <#--<td>1</td>-->
+                    <td>${r.dateTime!""}</td>
+                    <td>${r.rState!""}</td>
+                    <td>${r.rType!""}</td>
+                    <td>${r.rCost!""}</td>
+                    <td>${r.description!""}</td>
+                    <th class="col-sm-1">
+                        <a class="btn btn-primary btn-block" href="/admin/repairs/${r.r_id}">Edit</a>
+                    </th>
+                    <th class="col-sm-1">
+                        <a class="btn btn-danger btn-block" href="/admin/repairs/${r.r_id}/delete" >Delete</a>
+                    </th>
                 </tr>
                 </tbody>
+                </#list>
             </table>
         </div>
     </div>
