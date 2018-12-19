@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <#include "partials/head.ftl">
-    <title>Home</title>
+    <#include "/partials/head.ftl">
+    <title>MASTER</title>
 </head>
-
 <body>
-
-<#--<#include "partials/navbar.ftl">-->
-
 <div class="container-fluid">
 
 </div>
-
-<#include "partials/scripts.ftl">
-
+<#include "/partials/footer.ftl">
+<#include "/partials/scripts.ftl">
 </body>
 </html>

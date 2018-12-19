@@ -1,5 +1,4 @@
 <ul class="nav nav-sidebar">
-    <li><a href="/">Home</a></li>
-    <li><a href="/books">Books</a></li>
-    <li><a href="/register">Register</a></li>
+    <li><a href="">OWNER SEARCH</a> </li>
+    <li><a href="">REPAIR SEARCH</a> </li>
 </ul>
