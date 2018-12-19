@@ -3,6 +3,11 @@
  */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   padding-top: 50px;
   margin-bottom: 60px; /*=gia to footer=*/
@@ -132,4 +137,5 @@ body {
 .container .text-muted {
   margin: 20px 0;
 }
+
 /*-----------------------------------*/

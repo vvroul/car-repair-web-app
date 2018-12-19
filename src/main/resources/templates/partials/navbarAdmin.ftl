@@ -10,8 +10,8 @@
             </button>
             <a class="navbar-brand" href="/">GREETINGS "..onoma..admin.."</a>
         </div>
-        <div class="navbar-collapse collapse" id="navbar">
-            <ul class="nav navbar-nav navbar-right">
+        <div class="navbar-collapse collapse navbar-right" id="navbar">
+            <ul class="nav navbar-nav ">
                 <button type="button" class="btn btn-primary navbar-btn">Customers</button>
                 <button type="button" class="btn btn-primary navbar-btn">Repairs</button>
                 <button type="button" class="btn btn-danger navbar-btn">Sign out</button>
