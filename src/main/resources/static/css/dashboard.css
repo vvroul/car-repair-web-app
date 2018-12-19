@@ -4,13 +4,13 @@
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 html {
-  position: relative;
-  min-height: 100%;
+  position: relative;   /*=gia to footer=*/
+  min-height: 100%;     /*=gia to footer=*/
 }
 
 body {
   padding-top: 50px;
-  margin-bottom: 60px; /*=gia to footer=*/
+  margin-bottom: 60px;  /*=gia to footer=*/
 }
 
 
@@ -116,6 +116,7 @@ body {
 /*extra css style classes*/
 /*==starter-template==*/
 .starter-template {
+  margin: 25px;
   padding: 40px 15px;
   text-align: center;
   background-color: lightgrey;

@@ -9,7 +9,17 @@ public class HomeController {
 
     @GetMapping(path="/")
     public String home(){
-        return "home";
+//        return "home";
+//        return "customerMain";
+//        return "adminMain";
+//        return "adminCreateCustomer";
+//        return "adminCreateRepair";
+//        return "adminSearchCustomer";
+        return "adminSearchRepair";
+//        return "adminEditCustomer";
+//        return "adminEditRepair";
+//        return "adminSearchCustomerResult";
+//        return "adminSearchRepairResult";
     }
 
 }

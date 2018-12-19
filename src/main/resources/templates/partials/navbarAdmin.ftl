@@ -12,8 +12,22 @@
         </div>
         <div class="navbar-collapse collapse navbar-right" id="navbar">
             <ul class="nav navbar-nav ">
-                <button type="button" class="btn btn-primary navbar-btn">Customers</button>
-                <button type="button" class="btn btn-primary navbar-btn">Repairs</button>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Customers
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Create new</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Repairs
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Create new</a></li>
+                    </ul>
+                </li>
                 <button type="button" class="btn btn-danger navbar-btn">Sign out</button>
             </ul>
         </div>
