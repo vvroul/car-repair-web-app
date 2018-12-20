@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">TEAM 8 - CarFixALot</a>
+            <a class="navbar-brand" href="#">AUTO REPAIRS "TEAM-8"</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <form action="/" name="loginForm" method="POST" class="navbar-form navbar-right">

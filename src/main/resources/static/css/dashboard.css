@@ -139,4 +139,19 @@ body {
   margin: 20px 0;
 }
 
+.easterEgg {
+  background-color: #222222;
+  padding: 20px;
+}
+
+.easterEggButton {
+  background:transparent;
+  border:none;
+  height:200px;
+  width:200px;
+  cursor:pointer;
+  /*visibility: invisible;*/
+  color : inherit;
+}
+
 /*-----------------------------------*/

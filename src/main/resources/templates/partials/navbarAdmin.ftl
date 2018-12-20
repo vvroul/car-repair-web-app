@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">GREETINGS "..onoma..admin.."</a>
+            <a class="navbar-brand" href="/">AUTO REPAIRS "TEAM-8"</a>
         </div>
         <div class="navbar-collapse collapse navbar-right" id="navbar">
             <ul class="nav navbar-nav ">

@@ -60,7 +60,7 @@ public class LoginController {
         if (bindingResult.hasErrors()) {
             //have some error handling here, perhaps add extra error messages to the model
             model.addAttribute("errorMessage", bindingResult.getAllErrors().get(0).getDefaultMessage());
-            return redirect("/");
+            return redirect("/ea");
         }
 
         Users user = usersServiceImpl.getUsersByEmailAndPassword(loginForm.getEmail(), loginForm.getPassword());

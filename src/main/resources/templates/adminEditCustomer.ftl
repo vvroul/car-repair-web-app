@@ -3,7 +3,7 @@
 <head>
     <#import "/spring.ftl" as spring />
     <#include "/partials/head.ftl">
-    <title>MASTER</title>
+    <title>AUTO REPAIRS "TEAM-8"</title>
 </head>
 <body>
 <div class="container-fluid">
