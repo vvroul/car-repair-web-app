@@ -31,14 +31,14 @@ public class RepairsController {
     public String repairs(Model model) {
         List<RepairsModel> repairs = repairsServiceImpl.getAll();
         model.addAttribute("theRepairs", repairs);
-        return "repairs";
+        return "adminSearchRepair";
     }
 
     @PostMapping(value = "/repairs")
     public String updatedRepairs(Model model) {
         List<RepairsModel> repairs = repairsServiceImpl.getAll();
-        model.addAttribute("repairs", repairs);
-        return "repairs";
+        model.addAttribute("theRepairs", repairs);
+        return "adminSearchRepair";
     }
 
 

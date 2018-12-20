@@ -17,15 +17,15 @@
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Search</a></li>
-                        <li><a href="/admin/create_repairs">Create new</a></li>
+                        <li><a href="">Create new</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Repairs
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Search</a></li>
-                        <li><a href="#">Create new</a></li>
+                        <li><a href="/admin/repairs">Search</a></li>
+                        <li><a href="/admin/create_repairs">Create new</a></li>
                     </ul>
                 </li>
                 <button type="button" class="btn btn-danger navbar-btn">Sign out</button>

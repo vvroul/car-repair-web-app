@@ -38,6 +38,6 @@ public class RepairsSearchController {
         HybridModel hybridModel = repairsMapper.mapToHybridModel(repairsForm);
         List<RepairsModel> theRepairs = repairsServiceImpl.getRepairsByDateAndAFMAndPlate(hybridModel);
         model.addAttribute("adminRepairs", theRepairs);
-        return "displayRepairsResults";
+        return "adminSearchRepairResult";
     }
 }
