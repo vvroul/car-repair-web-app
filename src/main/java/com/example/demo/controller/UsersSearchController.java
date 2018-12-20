@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
+@RequestMapping("/admin")
 public class UsersSearchController {
 
     private static final String SEARCH_FORM = "searchForm";
@@ -41,19 +42,20 @@ public class UsersSearchController {
         binder.addValidators(searchValidator);
     }
 
-//    @GetMapping(value = "/search") public String search(Model model) {
+//    @GetMapping(value = "/searchCustomer") public String search(Model model) {
 //        model.addAttribute(SEARCH_FORM,
 //                new UsersSearchForm());
 //        return "search";
 //    }
 
-    @PostMapping(value = "/search")
+    @PostMapping(value = "/searchCustomer")
     public String search(Model model,
                            @Valid @ModelAttribute(SEARCH_FORM)
                                    UsersSearchForm searchForm,
                            BindingResult bindingResult,
                          @RequestParam(value = "aFM", required = false, defaultValue = "") String aFM,
-                         @RequestParam(value = "email", required = false, defaultValue = "") String email ) {
+                         @RequestParam(value = "email", required = false, defaultValue = "") String email,
+                         @RequestParam(value = "u_id", required = false, defaultValue = "") Long u_id) {
 
 
         if (bindingResult.hasErrors()) {
@@ -62,14 +64,14 @@ public class UsersSearchController {
             return "search";
         }
 
-        UsersModel userModel = mapper.mapToUserModel(searchForm);
-        Users theUsers =  usersServiceImpl.getUsersByAFMAndEmail(userModel.getaFM(), userModel.getEmail());
-        aFM = theUsers.getaFM();
-        //System.out.println("afm : " + aFM);
+//
+        Users theUsers =  usersServiceImpl.getUsersByAFMAndEmail(searchForm.getaFM(), searchForm.getEmail());
+        aFM = theUsers.getaFM();UsersModel userModel = mapper.mapToUserModel(searchForm);
         email = theUsers.getEmail();
+        u_id = theUsers.getU_id();
         model.addAttribute("aFM", aFM);
-        //System.out.println("email : " + email);
         model.addAttribute("email", email);
-        return "displayResults";
+        model.addAttribute("u_id", u_id);
+        return "adminSearchCustomerResult";
     }
 }

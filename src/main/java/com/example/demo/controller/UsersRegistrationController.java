@@ -14,8 +14,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import com.example.demo.utils.GlobalAttributes;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+
+import static com.example.demo.utils.GlobalAttributes.ERROR_MESSAGE;
 
 @Controller
 @RequestMapping("/admin")
@@ -41,7 +45,7 @@ public class UsersRegistrationController {
     public String register(Model model) {
         model.addAttribute(REGISTER_FORM,
                 new UsersRegisterForm());
-        return "register";
+        return "adminCreateCustomer";
     }
 
     @PostMapping(value = "/register")
@@ -53,12 +57,27 @@ public class UsersRegistrationController {
 
         if (bindingResult.hasErrors()) {
             //have some error handling here, perhaps add extra error messages to the model
-            model.addAttribute("errorMessage", "an error occurred");
-            return "register";
+            model.addAttribute("errorMessage",  bindingResult.getAllErrors().get(0).getDefaultMessage());
+            return redirect("admin/customers");
         }
 
         UsersModel userModel = mapper.mapToUserModel(registerForm);
         usersServiceImpl.create(userModel);
-        return "register";
+        return redirect("customers");
     }
+
+
+    //@ExceptionHandler({BooksNotFoundException.class})
+    public String handleError(HttpServletRequest request,
+                              RedirectAttributes redirectAttrs,
+                              RuntimeException e) {
+        redirectAttrs.addFlashAttribute(ERROR_MESSAGE,
+                "Couldn't fetch data");
+        return "redirect:/";
+    }
+
+    private static String redirect(String uri) {
+        return String.format("redirect:%s", uri);
+    }
+
 }

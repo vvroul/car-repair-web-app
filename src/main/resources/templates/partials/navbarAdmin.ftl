@@ -16,8 +16,8 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Customers
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Search</a></li>
-                        <li><a href="">Create new</a></li>
+                        <li><a href="/admin/customers">Search</a></li>
+                        <li><a href="/admin/register">Create new</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">

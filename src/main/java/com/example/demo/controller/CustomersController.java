@@ -31,14 +31,14 @@ public class CustomersController {
     public String customers(Model model) {
         List<UsersModel> users = usersServiceImpl.getAll();
         model.addAttribute("users", users);
-        return "customers";
+        return "adminSearchCustomer";
     }
 
     @PostMapping(value = "/customers")
     public String updatedCustomers(Model model) {
         List<UsersModel> users = usersServiceImpl.getAll();
         model.addAttribute("users", users);
-        return "customers";
+        return "adminSearchCustomer";
     }
 
 

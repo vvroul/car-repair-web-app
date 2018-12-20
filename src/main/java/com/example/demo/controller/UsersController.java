@@ -24,7 +24,7 @@ public class UsersController {
     RepairsServiceImpl repairsServiceImpl;
 
     @GetMapping("/{id}")
-    public String home(String id, ModelMap model) {
+    public String home(@PathVariable String id, ModelMap model) {
         List<RepairsModel> repairs = repairsServiceImpl.getRepairsByOwner(Long.parseLong(id));
         model.addAttribute("theRepairs", repairs);
         return "customerMain";

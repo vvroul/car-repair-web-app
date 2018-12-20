@@ -1,13 +1,10 @@
 package com.example.demo.controller;
 
-import com.example.demo.controller.mappers.CreateFormToRepairsMapper;
 import com.example.demo.controller.mappers.LoginFormToUsersMapper;
 import com.example.demo.controller.mappers.UsersToUsersMapper;
 import com.example.demo.domain.Users;
 import com.example.demo.enumeration.UserTypeEnum;
 import com.example.demo.forms.LoginForm;
-import com.example.demo.forms.UsersSearchForm;
-import com.example.demo.model.UsersModel;
 import com.example.demo.service.UsersServiceImpl;
 import com.example.demo.validators.LoginValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +17,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 import static com.example.demo.utils.GlobalAttributes.ERROR_MESSAGE;
 
@@ -50,11 +42,11 @@ public class LoginController {
         binder.addValidators(loginValidator);
     }
 
-//    @GetMapping(value = "/") public String search(Model model) {
-//        model.addAttribute(LOGIN_FORM,
-//                new LoginForm());
-//        return "login";
-//    }
+    @GetMapping(path = "/")
+    public String home(Model model) {
+        model.addAttribute(LOGIN_FORM, new LoginForm());
+        return "home";
+    }
 
     @PostMapping(value = "/")
     public String search(Model model,
@@ -62,22 +54,20 @@ public class LoginController {
                                  LoginForm loginForm,
                          BindingResult bindingResult,
                          @RequestParam(value = "password", required = false, defaultValue = "") String password,
-                         @RequestParam(value = "email", required = false, defaultValue = "") String email ) {
+                         @RequestParam(value = "email", required = false, defaultValue = "") String email) {
 
 
         if (bindingResult.hasErrors()) {
             //have some error handling here, perhaps add extra error messages to the model
-            model.addAttribute("errorMessage", "an error occurred");
+            model.addAttribute("errorMessage", bindingResult.getAllErrors().get(0).getDefaultMessage());
             return redirect("/");
         }
 
-        UsersModel userModel = mapper.mapToUserModel(loginForm);
-        Users theUsers  = usersServiceImpl.getUsersByEmailAndPassword(userModel.getEmail(), userModel.getPassword());
-        if (theUsers.getuType() == UserTypeEnum.ADMIN)
-        {
-
+        Users user = usersServiceImpl.getUsersByEmailAndPassword(loginForm.getEmail(), loginForm.getPassword());
+        if (user.getuType() == UserTypeEnum.ADMIN) {
+            return redirect("admin");
         }
-        return redirect("/");
+        return redirect("users/" + user.getU_id().toString());
     }
 
 

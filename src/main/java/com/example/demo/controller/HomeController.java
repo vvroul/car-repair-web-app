@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-    private static final String LOGIN_FORM = "loginForm";
-
-    @GetMapping(path="/")
-    public String home(Model model){
-        model.addAttribute(LOGIN_FORM, new LoginForm());
-        return "home";
-    }
+//    private static final String LOGIN_FORM = "loginForm";
+//
+//    @GetMapping(path="/")
+//    public String home(Model model){
+//        model.addAttribute(LOGIN_FORM, new LoginForm());
+//        return "home";
+//    }
 }

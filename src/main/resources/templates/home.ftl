@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <#include "/partials/head.ftl">
+    <#include "partials/head.ftl">
     <title>AUTO REPAIRS "TEAM-8"</title>
 </head>
 <body>
 
-<#include "/partials/navbarHome.ftl">
+<#include "partials/navbarHome.ftl">
 
 
 
@@ -20,7 +20,7 @@
         </p>
     </div>
 </div>
-<#include "/partials/footer.ftl">
-<#include "/partials/scripts.ftl">
+<#include "partials/footer.ftl">
+<#include "partials/scripts.ftl">
 </body>
 </html>

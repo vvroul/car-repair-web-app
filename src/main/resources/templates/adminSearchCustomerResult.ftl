@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <#include "/partials/head.ftl">
+    <#import "/spring.ftl" as spring />
     <title>AUTO REPAIRS "TEAM-8"</title>
 </head>
 
@@ -13,39 +14,25 @@
         <h1>Customer search results:</h1>
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-4">
             <table class="table table-bordered">
                 <thead>
                 <tr>
-                    <th>#</th>
+                    <#--<th>#</th>-->
                     <th>AFM</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
                     <th>Email</th>
-                    <th>Password</th>
-                    <th>Adress</th>
-                    <th>Vehicle Type</th>
-                    <th>Vehicle Plate</th>
-                    <th>Type</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>1</td>
-                    <th>12345689</th>
-                    <th>John</th>
-                    <th>Smith</th>
-                    <th>johnsmith@mail.com</th>
-                    <th>98654321</th>
-                    <th>pera street 15</th>
-                    <th>Honda</th>
-                    <th>ABC-1234</th>
-                    <th>USER</th>
+                    <#--<td>1</td>-->
+                    <th>${aFM}</th>
+                    <th>${email}</th>
                     <th class="col-sm-1">
-                        <button type="button" class="btn btn-primary btn-block">Edit</button>
+                        <a class="btn btn-primary btn-block" href="/admin/customers/${u_id}">Edit</a>
                     </th>
                     <th class="col-sm-1">
-                        <button type="button" class="btn btn-danger btn-block">Delete</button>
+                        <a class="btn btn-danger btn-block" href="/admin/customers/${u_id}/delete" >Delete</a>
                     </th>
                 </tr>
                 </tbody>

@@ -49,7 +49,7 @@ public class UsersEditController {
 
         usersEditForm.setU_id(id);
         model.addAttribute("usersEditForm", usersEditForm);
-        return "editUsers";
+        return "adminEditCustomer";
     }
 
 
