@@ -17,7 +17,7 @@
             <table class="table table-bordered">
                 <thead>
                 <tr>
-                    <th>#</th>
+                    <#--<th>#</th>-->
                     <th>Date</th>
                     <th>State</th>
                     <th>Type</th>
@@ -25,16 +25,18 @@
                     <th>Description</th>
                 </tr>
                 </thead>
+                <#list theRepairs as r>
                 <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>dummy date</td>
-                    <td>dummy state</td>
-                    <td>dummy type</td>
-                    <td>1</td>
-                    <td>dummy description</td>
+                    <#--<td>1</td>-->
+                    <td>${r.dateTime!""}</td>
+                    <td>${r.rState!""}</td>
+                    <td>${r.rType!""}</td>
+                    <td>${r.rCost!""}</td>
+                    <td>${r.description!""}</td>
                 </tr>
                 </tbody>
+                </#list>
             </table>
         </div>
     </div>

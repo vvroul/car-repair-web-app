@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.domain.Users;
+import com.example.demo.model.RepairsModel;
 import com.example.demo.service.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +21,13 @@ import java.util.List;
 public class UsersController {
 
     @Autowired
-    UsersServiceImpl usersService;
+    RepairsServiceImpl repairsServiceImpl;
 
     @GetMapping("/{id}")
-    public String home(ModelMap model) {
-        model.addAttribute("message", "Hello World!");
-        return "register";
+    public String home(String id, ModelMap model) {
+        List<RepairsModel> repairs = repairsServiceImpl.getRepairsByOwner(Long.parseLong(id));
+        model.addAttribute("theRepairs", repairs);
+        return "customerMain";
     }
 
 }

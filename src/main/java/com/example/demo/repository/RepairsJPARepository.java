@@ -18,4 +18,7 @@ public interface RepairsJPARepository extends JpaRepository <Repairs, Long>{
     @Query(value = "SELECT r.* FROM REPAIRS r ORDER BY r.dateTime DESC LIMIT 10", nativeQuery = true)
     List<Repairs> findFirst10RepairsByDateTime();
 
+    @Query(value = "SELECT r.* FROM REPAIRS r WHERE r.owner = ?1", nativeQuery = true)
+    List<Repairs> findRepairsByOwner(Long owner);
+
 }

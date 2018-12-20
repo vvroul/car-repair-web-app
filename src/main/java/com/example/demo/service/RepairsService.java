@@ -26,4 +26,6 @@ public interface RepairsService {
 
     List<RepairsModel> getFirst10RepairsByDateTime();
 
+    List<RepairsModel> getRepairsByOwner(Long owner);
+
 }

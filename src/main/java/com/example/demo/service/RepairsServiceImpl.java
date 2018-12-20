@@ -96,6 +96,15 @@ public class RepairsServiceImpl implements RepairsService {
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public List<RepairsModel> getRepairsByOwner(Long owner) {
+        return repairsJPARepository.
+                findRepairsByOwner(owner)
+                .stream()
+                .map(repairs -> mapper.mapToRepairsModel(repairs))
+                .collect(Collectors.toList());
+    }
+
 
 }
 
