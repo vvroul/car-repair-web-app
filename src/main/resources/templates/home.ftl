@@ -8,6 +8,8 @@
 
 <#include "/partials/navbarHome.ftl">
 
+
+
 <div class="container-fluid">
     <div class="starter-template">
         <h1>Welcome to "TEAM-8" Auto Repair Shop</h1>

@@ -17,7 +17,7 @@
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Search</a></li>
-                        <li><a href="#">Create new</a></li>
+                        <li><a href="/admin/create_repairs">Create new</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">

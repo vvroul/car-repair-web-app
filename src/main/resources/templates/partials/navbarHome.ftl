@@ -1,3 +1,4 @@
+<#import "/spring.ftl" as spring />
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -10,12 +11,20 @@
             <a class="navbar-brand" href="#">TEAM 8 - CarFixALot</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right">
+            <form action="/" name="loginForm" method="POST" class="navbar-form navbar-right">
                 <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
+                    <@spring.bind "loginForm.email"/>
+                    <input type="text" placeholder="email" class="form-control" name="email">
+                    <#list spring.status.errorMessages as error>
+                        <span>${error}</span>
+                    </#list>
                 </div>
                 <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
+                    <@spring.bind "loginForm.password"/>
+                    <input type="password" placeholder="password" class="form-control" name="password">
+                    <#list spring.status.errorMessages as error>
+                        <span>${error}</span>
+                    </#list>
                 </div>
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>

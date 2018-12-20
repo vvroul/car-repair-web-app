@@ -45,7 +45,7 @@ public class UsersAdminHomeController {
     @PostMapping(value = "/{r_id}")
     public String updateRepairs(Model model, RepairsEditForm repairsEditForm,
                                 RedirectAttributes redirectAttributes) {
-        System.out.println("THE FORM : " + repairsEditForm.getDateTime());
+        //System.out.println("THE FORM : " + repairsEditForm.getDateTime());
         repairsService.update(repairsEditForm);
         return redirect("/admin/");
     }

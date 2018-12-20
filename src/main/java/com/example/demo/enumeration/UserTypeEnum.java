@@ -14,12 +14,12 @@ public enum UserTypeEnum {
         this.type = type;
     }
 
-    public static UserTypeEnum getInputEnum(Integer inputValue) {
-        for (UserTypeEnum value : UserTypeEnum.values()) {
-            if (inputValue.equals(value.getType())) {
-                return value;
-            }
-        }
-        return USER; //default
-    }
+//    public static UserTypeEnum getInputEnum(Integer inputValue) {
+//        for (UserTypeEnum value : UserTypeEnum.values()) {
+//            if (inputValue.equals(value.getType())) {
+//                return value;
+//            }
+//        }
+//        return USER; //default
+//    }
 }

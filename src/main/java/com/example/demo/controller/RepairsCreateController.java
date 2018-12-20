@@ -29,14 +29,14 @@ public class RepairsCreateController {
     @GetMapping(value = "/create_repairs")
     public String createRepairs (Model model){
         model.addAttribute(CREATION_FORM, new RepairsCreateForm());
-        return "create_repairs";
+        return "adminCreateRepair";
     }
 
     @PostMapping(value = "/create_repairs")
     public String createRepairs (Model model, @Valid @ModelAttribute(CREATION_FORM) RepairsCreateForm form){
         RepairsModel repairsModel = mapper.mapToRepairsModel(form);
         repairsServiceImpl.create(repairsModel);
-        return "create_repairs";
+        return "adminCreateRepair";
     }
 
 
